@@ -2,6 +2,7 @@ function __print_pixys_functions_help() {
 cat <<EOF
 Additional PIXYS functions:
 - gerrit:          Adds a remote for PixysOS Gerrit
+- mka:      Builds using SCHED_BATCH on all processors
 EOF
 }
 
@@ -43,4 +44,20 @@ function fixup_common_out_dir() {
         [ -L ${common_out_dir} ] && rm ${common_out_dir}
         mkdir -p ${common_out_dir}
     fi
+}
+
+function mka() {
+   local T=$(gettop)
+   if [ "$T" ]; then
+       case `uname -s` in
+           Darwin)
+               make -C $T -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
+               ;;
+           *)
+               schedtool -B -n 1 -e ionice -n 1 make -C $T -j$(cat /proc/cpuinfo | grep "^processor" | wc -l) "$@"
+               ;;
+       esac
+     else
+       echo "Couldn't locate the top of the tree.  Try setting TOP."
+   fi
 }
