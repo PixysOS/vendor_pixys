@@ -1,4 +1,4 @@
-function __print_jdc_functions_help() {
+function __print_pixys_functions_help() {
 cat <<EOF
 Additional JDC functions:
 - mka:             Builds using SCHED_BATCH on all processors.
