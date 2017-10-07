@@ -21,6 +21,8 @@ endif
 
 ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
 
+include vendor/security/pixys/keys.mk
+
 PRODUCT_PACKAGES += \
     Updater
 
