@@ -20,7 +20,7 @@ PIXYS_BUILD_TYPE := BETA
 endif
 
 #ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
-
+include vendor/pixys-priv/keys.mk
 #PRODUCT_PACKAGES += \
 #    Updater
 
