@@ -62,5 +62,11 @@
          Example: "com.android.wellbeing" -->
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
 
+    <!--  Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+
 </resources>
 
