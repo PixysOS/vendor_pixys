@@ -2,8 +2,9 @@ function __print_pixys_functions_help() {
 cat <<EOF
 Additional JDC functions:
 - mka:             Builds using SCHED_BATCH on all processors.
+- gerrit:          Adds a remote for PixysOS Gerrit
 EOF
-} 
+}
 
 function mk_timer()
 {
@@ -41,6 +42,22 @@ function mka() {
 function repopick() {
     T=$(gettop)
     $T/vendor/pixys/build/tools/repopick.py $@
+}
+
+function gerrit()
+{
+    if [ ! -d ".git" ]; then
+        echo -e "Please run this inside a git directory";
+    else
+        if [ -d ".git/refs/remotes/gerrit" ]; then
+            git remote rm gerrit;
+        fi
+        if [[ -z "${GERRIT_USER}" ]]; then
+            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e 's|https://github.com/PixysOS|ssh://gerrit.pixysos.org:29418/PixysOS|');
+        else
+            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e 's|https://github.com/PixysOS|ssh://${GERRIT_USER}@gerrit.pixysos.org:29418/PixysOS|');
+        fi
+    fi
 }
 
 function fixup_common_out_dir() {
