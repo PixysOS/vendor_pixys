@@ -1,4 +1,6 @@
-for combo in $(curl -s https://raw.githubusercontent.com/PixysOS/vendor_pixys/pie/pixys.devices | sed -e 's/#.*$//' | awk '{printf "pixys_%s-%s\n", $1, $2}')
+for device in $(python vendor/pixys/tools/official.py)
 do
-    add_lunch_combo $combo
+for var in eng user userdebug; do
+add_lunch_combo pixys_$device-$var
+done
 done
