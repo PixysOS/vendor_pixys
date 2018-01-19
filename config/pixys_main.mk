@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
      PixysSettings \
      Turbo \
      CameraRoll \
-     MaterialFXPrebuilt \ 
+     MaterialFXPrebuilt \
+     SoundPickerPrebuilt \
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
