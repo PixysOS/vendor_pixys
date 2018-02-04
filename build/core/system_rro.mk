@@ -1,5 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
-#           (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Rules for MTK targets
-include $(TOPDIR)vendor/pixys/build/core/mtk_target.mk
+LOCAL_IS_RUNTIME_RESOURCE_OVERLAY := true
 
-# Rules for QCOM targets
-include $(TOPDIR)vendor/pixys/build/core/qcom_target.mk
+ifneq ($(LOCAL_SRC_FILES),)
+  $(error runtime resource overlay package should not contain sources)
+endif
 
-# Build RRO packages as System apps
-BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/lineage/build/core/system_rro.mk
+ifeq ($(LOCAL_RRO_THEME),)
+  $(error runtime resource overlay package must define \'LOCAL_RRO_THEME\')
+else
+  LOCAL_MODULE_PATH := $(TARGET_OUT)/app/$(LOCAL_RRO_THEME)
+endif
+
+include $(BUILD_SYSTEM)/package.mk
+
