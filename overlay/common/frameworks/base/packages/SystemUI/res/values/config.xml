@@ -43,4 +43,7 @@
     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
 
+    <!-- The duration for animating the task decorations in after transitioning from an app. -->
+    <integer name="recents_task_enter_from_app_duration">0</integer>
+
 </resources>
