@@ -14,12 +14,12 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# PixysOS OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/PixysOS-$(PIXYS_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXYS_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(PIXYS_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXYS_TARGET_PACKAGE).md5sum
+	@echo "Package Complete: $(PIXYS_TARGET_PACKAGE)" >&2
