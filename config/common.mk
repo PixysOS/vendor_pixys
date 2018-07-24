@@ -173,4 +173,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixys/config/partner_gms.mk
 
+include vendor/pixys/config/pixys_main.mk
+
 $(call prepend-product-if-exists, vendor/extra/product.mk)
