@@ -4,6 +4,14 @@ PIXYS_VERSION_NUMBER := 1.0
 
 ifndef PIXYS_BUILDTYPE
 PIXYS_BUILDTYPE := UNOFFICIAL
+
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.pixys.buildtype=unofficial
+endif
+
+ifeq ($(PIXYS_BUILDTYPE), OFFICIAL)
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.pixys.buildtype=official
 endif
 
 PIXYS_VERSION := PixysOS-$(PIXYS_VERSION_NUMBER)-$(shell date -u +%Y%m%d)-$(PIXYS_BUILDTYPE)-$(PIXYS_BUILD)
