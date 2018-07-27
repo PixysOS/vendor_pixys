@@ -20,7 +20,7 @@ ifneq ($(BUILD_WITH_COLORS),0)
     include $(TOP_DIR)vendor/pixys/build/core/colors.mk
 endif
 
-PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/PixysOS-$(PIXYS_VERSION).zip
+PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION).zip
 
 .PHONY: bacon pixys
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
