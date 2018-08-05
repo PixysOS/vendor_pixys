@@ -4,3 +4,6 @@ PRODUCT_PACKAGES += \
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
+
+# Pixys props
+$(call inherit-product, vendor/pixys/config/pixys_props.mk)
