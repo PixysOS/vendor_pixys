@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Launcher3 \
     Stk \
-    Terminal
+    Terminal \
+    PixysOTA
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
