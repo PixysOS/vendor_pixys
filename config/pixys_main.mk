@@ -12,4 +12,4 @@ include vendor/pixys/themes/config.mk
 $(call inherit-product, vendor/pixys/config/pixys_props.mk)
 
 # Call Overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/pixys/themes/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
