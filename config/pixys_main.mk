@@ -1,7 +1,8 @@
 # PixysOS apps
 PRODUCT_PACKAGES += \
     Launcher3 \
-    NexusLauncherPrebuilt
+    NexusLauncherPrebuilt \
+    MarkupGoogle
 
 # Markup libs
 PRODUCT_COPY_FILES += \
