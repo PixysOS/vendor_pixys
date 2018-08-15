@@ -43,7 +43,7 @@ except ImportError:
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/pixys.xml"
-custom_default_revision = "oreo"
+custom_default_revision = "pie"
 custom_dependencies = "pixys.dependencies"
 org_manifest = "pixys-devices"  # leave empty if org is provided in manifest
 org_display = "PixysOS-Devices"  # needed for displaying
