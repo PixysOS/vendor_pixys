@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Launcher3 \
     NexusLauncherPrebuilt \
-    MarkupGoogle
+    MarkupGoogle \
+    LatinIME
 
 # Markup libs
 PRODUCT_COPY_FILES += \
