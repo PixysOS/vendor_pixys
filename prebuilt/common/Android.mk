@@ -12,7 +12,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := NexusLauncherPrebuilt
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := NexusLauncherPrebuilt/NexusLauncherPrebuilt.apk
+LOCAL_SRC_FILES := app/NexusLauncherPrebuilt/NexusLauncherPrebuilt.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
@@ -24,9 +24,20 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := MarkupGoogle
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := MarkupGoogle/MarkupGoogle.apk
+LOCAL_SRC_FILES := app/MarkupGoogle/MarkupGoogle.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := WellbeingPrebuilt
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := app/WellbeingPrebuilt/WellbeingPrebuilt.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)	LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_DEX_PREOPT := false	LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
