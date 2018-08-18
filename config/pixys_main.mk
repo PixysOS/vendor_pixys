@@ -1,7 +1,8 @@
 # PixysOS apps
 PRODUCT_PACKAGES += \
-     MarkupGoogle
-
+     MarkupGoogle \
+     WellbeingPrebuilt
+ 
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
