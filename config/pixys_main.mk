@@ -1,7 +1,6 @@
 # PixysOS apps
 PRODUCT_PACKAGES += \
     Launcher3 \
-    NexusLauncherPrebuilt \
     MarkupGoogle \
     LatinIME \
     WellbeingPrebuilt
