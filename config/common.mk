@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= Pixys
 
-PIXYS_VERSION_NUMBER := 2.0
+PIXYS_VERSION_NUMBER := v2.0
 
 ifndef PIXYS_BUILDTYPE
 PIXYS_BUILDTYPE := UNOFFICIAL
@@ -10,7 +10,10 @@ PRODUCT_GENERIC_PROPERTIES += \
 endif
 
 ifeq ($(PIXYS_BUILDTYPE), OFFICIAL)
+
 PRODUCT_GENERIC_PROPERTIES += \
+    ro.pixys.version=$(PIXYS_VERSION) \
+    ro.modversion=$(PIXYS_VERSION_NUMBER) \
     ro.pixys.buildtype=official
 endif
 
