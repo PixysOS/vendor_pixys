@@ -10,21 +10,20 @@
      See the License for the specific language governing permissions and
      limitations under the License. --> <resources 
 xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Wallpaper cropper package. Used as the default cropper if the active 
-launcher doesn't
+    <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
          handle wallpaper cropping.
     -->
-    <string name="config_wallpaperCropperPackage" 
-translatable="false">com.google.android.apps.wallpaper</string>
-    <!-- Flag indicating whether round icons should be parsed from the application 
-manifest. -->
+    <string name="config_wallpaperCropperPackage" translatable="false">com.google.android.apps.wallpaper</string>
+
+    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
-    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop 
-launcher icons. -->
-    <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 
-100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
+
+    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
+    <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
+
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
     <bool name="config_defaultRingtonePickerEnabled">false</bool>
+
     <!-- Misc -->
     <bool name="config_smart_battery_available">true</bool>
     <bool name="config_buttonTextAllCaps">false</bool>
@@ -33,4 +32,5 @@ launcher icons. -->
     <dimen name="config_dialogCornerRadius">8.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
+
 </resources>
