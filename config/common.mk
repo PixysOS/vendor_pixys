@@ -9,6 +9,8 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.pixys.buildtype=unofficial
 endif
 
+PIXYS_VERSION := PixysOS-$(PIXYS_VERSION_NUMBER)-$(shell date -u +%Y%m%d)-$(PIXYS_BUILDTYPE)-$(PIXYS_BUILD)
+
 ifeq ($(PIXYS_BUILDTYPE), OFFICIAL)
 
 PRODUCT_GENERIC_PROPERTIES += \
@@ -16,8 +18,6 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.modversion=$(PIXYS_VERSION_NUMBER) \
     ro.pixys.buildtype=official
 endif
-
-PIXYS_VERSION := PixysOS-$(PIXYS_VERSION_NUMBER)-$(shell date -u +%Y%m%d)-$(PIXYS_BUILDTYPE)-$(PIXYS_BUILD)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
