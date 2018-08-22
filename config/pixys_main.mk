@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
      MarkupGoogle \
      WellbeingPrebuilt \
-     LatinIME
+     LatinIME \
+     NexusLauncherPrebuilt
 
 # Markup libs
 PRODUCT_COPY_FILES += \
