@@ -1,9 +1,5 @@
 # PixysOS apps
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Stk \
-    Terminal \
-    PixysOTA
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
