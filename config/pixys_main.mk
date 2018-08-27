@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
      MarkupGoogle \
      WellbeingPrebuilt \
      LatinIME \
-     PixelLauncher3
+     PixelLauncher3 \
+     PixysOTA
 
 # Markup libs
 PRODUCT_COPY_FILES += \
