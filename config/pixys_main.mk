@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
      WellbeingPrebuilt \
      LatinIME \
      PixelLauncher3 \
-     PixysOTA
+     PixysOTA \
+     FMRadio
 
 # Markup libs
 PRODUCT_COPY_FILES += \
