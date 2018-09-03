@@ -9,9 +9,15 @@ PRODUCT_PACKAGES += \
      PixysSettings
 
 # Markup libs
+ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/pixys/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+
+    else
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so
+endif
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
