@@ -5,7 +5,6 @@ PRODUCT_PACKAGES += \
      LatinIME \
      PixelLauncher3 \
      PixysOTA \
-     FMRadio \
      PixysSettings
 
 # Markup libs
