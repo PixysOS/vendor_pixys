@@ -21,7 +21,8 @@ endif
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/pixys/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+    vendor/pixys/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml \
+    vendor/pixys/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
