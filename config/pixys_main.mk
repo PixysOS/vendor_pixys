@@ -39,6 +39,9 @@ DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
+# Fonts
+include vendor/pixys/config/fonts.mk
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/permissions/turbo.xml:system/etc/permissions/turbo.xml
