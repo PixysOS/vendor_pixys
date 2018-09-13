@@ -9,7 +9,10 @@ type Product_variables struct {
 	Needs_text_relocations struct {
 		Cppflags []string
 	}
-	Target_shim_libs struct {
+	Target_destroyed_mutex_usage_whitelist struct {
+		Cppflags []string
+	}
+        Target_shim_libs struct {
 		Cppflags []string
 	}
 	Uses_generic_camera_parameter_library struct {
