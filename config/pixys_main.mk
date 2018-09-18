@@ -31,3 +31,7 @@ $(call inherit-product, vendor/pixys/config/pixys_props.mk)
 
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
+
+# Clean cache
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
