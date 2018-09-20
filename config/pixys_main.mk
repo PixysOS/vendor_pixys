@@ -5,7 +5,8 @@ PRODUCT_PACKAGES += \
      LatinIME \
      PixelLauncher3 \
      PixysOTA \
-     PixysSettings
+     PixysSettings \
+     Turbo
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
@@ -21,7 +22,8 @@ endif
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml \
-    vendor/pixys/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+    vendor/pixys/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
+    vendor/pixys/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
@@ -35,3 +37,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 # Clean cache
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/permissions/turbo.xml:system/etc/permissions/turbo.xml
