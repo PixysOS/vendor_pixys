@@ -16,3 +16,5 @@ ifneq "$(wildcard $(KERNEL_SRC) )" ""
 PRODUCT_SOONG_NAMESPACES += \
     $(KERNEL_SRC)
 endif
+
+include vendor/pixys/config/BoardConfigKernel.mk
