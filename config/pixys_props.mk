@@ -15,4 +15,5 @@
 PRODUCT_GENERIC_PROPERTIES += \
     ro.opa.eligible_device=true\
     ro.setupwizard.rotation_locked=true \
-    ro.com.android.dateformat=MM-dd-yyyy
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.setupwizard.rotation_locked=true
