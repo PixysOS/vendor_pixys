@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
      PixelLauncher3 \
      PixysOTA \
      PixysSettings \
-     Turbo
+     Turbo \
+     CameraRoll
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
