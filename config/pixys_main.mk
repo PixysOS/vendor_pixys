@@ -3,11 +3,14 @@ PRODUCT_PACKAGES += \
      MarkupGoogle \
      WellbeingPrebuilt \
      LatinIME \
-     PixelLauncher3 \
+     NexusLauncherPrebuilt \
      PixysOTA \
      PixysSettings \
      Turbo \
-     CameraRoll
+     CameraRoll \
+     DeviceSettings \
+     DiracFX \
+     DiracAudioControlService
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)

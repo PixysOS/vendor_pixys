@@ -34,9 +34,9 @@ include $(BUILD_PREBUILT)
 
 #NexusLauncher
 include $(CLEAR_VARS)
-LOCAL_MODULE := PixelLauncher3
+LOCAL_MODULE := NexusLauncherPrebuilt
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := apps/PixelLauncher3/PixelLauncher3.9.4.apk
+LOCAL_SRC_FILES := apps/NexusLauncherPrebuilt/NexusLauncherPrebuilt.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
@@ -65,4 +65,16 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := Gallery Gallery2 SnapdragonGallery VanillaGallery
+include $(BUILD_PREBUILT)
+
+#DeviceSettings
+include $(CLEAR_VARS)
+LOCAL_MODULE := DeviceSettings
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := apps/DeviceSettings/DeviceSettings.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
