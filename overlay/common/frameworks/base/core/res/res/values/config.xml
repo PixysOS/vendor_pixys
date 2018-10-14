@@ -130,4 +130,8 @@
  
     <string name="config_recentsComponentName">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
 
+    <!-- The feature identifying devices which are able to use the Android Flip to shhh. -->
+    <boolean name="support_auto_dnd_gesture" value="true" />
+    <boolean name="auto_dnd_device_supported" value="true" />
+
 </resources>
