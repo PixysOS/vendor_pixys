@@ -16,4 +16,8 @@
     <feature name="com.google.android.apps.photos.PIXEL_2017_PRELOAD" />
     <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
     <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
+
+    <!-- The feature identifying devices which are able to use the Android Flip to shhh. -->
+    <feature name="com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.autodnd.ui.AutoDndGesturesSettingsActivity" />
+
 </config>
