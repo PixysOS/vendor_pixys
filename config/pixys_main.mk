@@ -3,14 +3,11 @@ PRODUCT_PACKAGES += \
      MarkupGoogle \
      WellbeingPrebuilt \
      LatinIME \
-     NexusLauncherPrebuilt \
+     PixelLauncher3 \
      PixysOTA \
      PixysSettings \
      Turbo \
-     CameraRoll \
-     DeviceSettings \
-     DiracFX \
-     DiracAudioControlService
+     CameraRoll
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
@@ -45,3 +42,11 @@ PRODUCT_COPY_FILES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/permissions/turbo.xml:system/etc/permissions/turbo.xml
+
+# Wi-fi
+PRODUCT_PROPERTY_OVERRIDES := \
+     persist.sys.wfd.nohdcp=1 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0
