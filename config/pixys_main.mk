@@ -42,3 +42,11 @@ PRODUCT_COPY_FILES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/permissions/turbo.xml:system/etc/permissions/turbo.xml
+
+# Wi-fi
+PRODUCT_PROPERTY_OVERRIDES := \
+     persist.sys.wfd.nohdcp=1 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0
