@@ -1,6 +1,6 @@
-function __print_jdc_functions_help() {
+function __print_pixys_functions_help() {
 cat <<EOF
-Additional JDC functions:
+Additional PixyOS functions:
 - mka:             Builds using SCHED_BATCH on all processors.
 EOF
 } 
@@ -41,7 +41,7 @@ function mka() {
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
-    if [ ! -z $JDC_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $PIXYS_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_out_dir}-${target_device} ${common_out_dir}
