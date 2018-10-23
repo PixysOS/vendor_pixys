@@ -18,3 +18,5 @@ PRODUCT_SOONG_NAMESPACES += \
 endif
 
 include vendor/pixys/config/BoardConfigKernel.mk
+
+include vendor/pixys/config/BoardConfigSoong.mk
