@@ -19,4 +19,13 @@
 
     <string name="themes_stub_package" translatable="false">com.google.android.apps.customization.pixel</string>
 
+    <style name="SuggestionCardText"> 
+         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="SuggestionCardIcon"> 
+         <item name="android:layout_centerHorizontal">true</item> 
+         <item  name="android:layout_alignParentStart">false</item>
+    </style>
+
 </resources>
