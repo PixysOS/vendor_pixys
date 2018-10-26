@@ -4,7 +4,6 @@ PRODUCT_PACKAGES += \
      WellbeingPrebuilt \
      LatinIME \
      PixelLauncher3 \
-     PixysOTA \
      PixysSettings \
      Turbo \
      CameraRoll

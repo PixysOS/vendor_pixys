@@ -12,6 +12,10 @@ endif
 ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
 PRODUCT_GENERIC_PROPERTIES += \
     ro.pixys.buildtype=official
+
+PRODUCT_PACKAGES += \
+    Updater
+
 endif
 
 PIXYS_VERSION := PixysOS-$(PIXYS_VERSION_NUMBER)-$(shell date -u +%Y%m%d)-$(PIXYS_BUILD)-$(PIXYS_BUILD_TYPE)
