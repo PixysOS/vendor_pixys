@@ -50,3 +50,7 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
+
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.pixys.rc
