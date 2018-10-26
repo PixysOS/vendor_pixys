@@ -56,6 +56,10 @@ else
     ro.device.cache_dir=/cache
 endif
 
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.arrow.rc
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
