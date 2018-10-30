@@ -1,2 +1,2 @@
 # Include PixysOS versions
-include $(TOPDIR)vendor/pixys/build/core/main_version.mk
+include $(TOPDIR)vendor/pixys/config/version.mk

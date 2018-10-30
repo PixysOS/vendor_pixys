@@ -17,3 +17,11 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.setupwizard.rotation_locked=true
+	
+# Wi-fi
+PRODUCT_PROPERTY_OVERRIDES := \
+     persist.sys.wfd.nohdcp=1 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0 \
+     persist.debug.wfd.enable=1 \
+     persist.sys.wfd.virtual=0
