@@ -42,10 +42,59 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/permissions/turbo.xml:system/etc/permissions/turbo.xml
 
-# Wi-fi
-PRODUCT_PROPERTY_OVERRIDES := \
-     persist.sys.wfd.nohdcp=1 \
-     persist.debug.wfd.enable=1 \
-     persist.sys.wfd.virtual=0 \
-     persist.debug.wfd.enable=1 \
-     persist.sys.wfd.virtual=0
+# Include explicitly to work around GMS issues
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    librsjni
+
+# Extra tools in PixysOS
+PRODUCT_PACKAGES += \
+    7z \
+    awk \
+    bash \
+    bzip2 \
+    curl \
+    fsck.ntfs \
+    gdbserver \
+    htop \
+    lib7z \
+    libsepol \
+    micro_bench \
+    mke2fs \
+    mkfs.ntfs \
+    mount.ntfs \
+    oprofiled \
+    pigz \
+    powertop \
+    sqlite3 \
+    strace \
+    tune2fs \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# exFAT tools
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    mkfs.exfat
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+>>>>>>> 5f155b61... pixys: Now it looks cool:config/pixys_packages.mk
