@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
      PixysOTA \
      PixysSettings \
      Turbo \
-     CameraRoll
+     CameraRoll \
+     AmbientSensePrebuilt
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
@@ -28,6 +29,10 @@ PRODUCT_COPY_FILES += \
 
 # Pixys Theme
 include vendor/pixys/themes/config.mk
+
+# Now Playing
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/ambient/matcher_tah.leveldb:system/etc/ambient/matcher_tah.leveldb \
 
 # Pixys props
 $(call inherit-product, vendor/pixys/config/pixys_props.mk)
