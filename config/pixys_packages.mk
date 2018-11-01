@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
      PixelLauncher3 \
      PixysSettings \
      Turbo \
+     WallpaperPickerGooglePrebuilt \
      CameraRoll
 
 # Markup libs
