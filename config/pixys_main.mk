@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
      PixysOTA \
      PixysSettings \
      Turbo \
+     WallpaperPickerGooglePrebuilt
      CameraRoll
 
 # Markup libs
