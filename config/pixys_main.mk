@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
      PixysOTA \
      PixysSettings \
      Turbo \
-     CameraRoll
+     CameraRoll \
+     MaterialFXPrebuilt
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
