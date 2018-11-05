@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
      Turbo \
      WallpaperPickerGooglePrebuilt \
      CameraRoll \
-     WeatherClient
+     WeatherClient \
+     MaterialFXPrebuilt
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
