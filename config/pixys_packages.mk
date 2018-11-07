@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
      CameraRoll \
      WeatherProvider \
      MaterialFXPrebuilt \
-     SoundPickerPrebuilt
+     SoundPickerPrebuilt \
+     SubstratumKey
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
