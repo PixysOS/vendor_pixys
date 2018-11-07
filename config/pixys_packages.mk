@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
      PixysSettings \
      Turbo \
      WallpaperPickerGooglePrebuilt \
-     CameraRoll
+     CameraRoll \
+     WeatherClient
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
@@ -101,4 +102,7 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
->>>>>>> 5f155b61... pixys: Now it looks cool:config/pixys_packages.mk
+
+# Weather
+PRODUCT_COPY_FILES += \
+     vendor/pixys/prebuilt/common/etc/permissions/com.pixys.weather.client.xml:system/etc/permissions/com.pixys.weather.client.xml
