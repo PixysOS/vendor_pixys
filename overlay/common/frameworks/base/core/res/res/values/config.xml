@@ -156,4 +156,7 @@
         <item>com.custom.fonts</item>
     </string-array>
 
+    <!--AlwaysOnDisplay disabled by default -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
 </resources>
