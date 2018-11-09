@@ -11,9 +11,9 @@ PRODUCT_PACKAGES += \
      MaterialFXPrebuilt \
      AmbientPlayHistoryProvider
 
-# Subs OMS
-PRODUCT_PACKAGES += \
-    SubstratumSignature
+# SubstratumSignature Package
+PRODUCT_COPY_FILES += \
+     vendor/pixys/prebuilt/common/apps/SubstratumSignature/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
