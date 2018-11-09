@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
      WallpaperPickerGooglePrebuilt \
      CameraRoll \
      WeatherClient \
-     MaterialFXPrebuilt
+     MaterialFXPrebuilt \
+     AmbientPlayHistoryProvider
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)

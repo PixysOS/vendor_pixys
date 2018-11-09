@@ -93,7 +93,6 @@ include $(BUILD_PREBUILT)
 
 #MaterialFX
 include $(CLEAR_VARS)
-LOCAL_PATH := $(call my-dir)
 LOCAL_MODULE := MaterialFXPrebuilt
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := apps/MaterialFXPrebuilt/MaterialFXPrebuilt.apk
