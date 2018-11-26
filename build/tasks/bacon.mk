@@ -21,6 +21,8 @@ ifneq ($(BUILD_WITH_COLORS),0)
 endif
 
 PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION).zip
+PIXYS_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
+PIXYS_BUILD_TIME := 
 
 .PHONY: bacon pixys
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
@@ -52,6 +54,15 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_RED}"                                                  yyyyyyy                                                                     "${CL_RED}
 	@echo -e ${CL_RED}"                                                                                                                              "${CL_RED}
 	@echo -e ${CL_RED}"                                      Your Build Is Ready! Enjoy the PixysOS                                                  "${CL_RED}
-	@echo -e ${CL_RED}"$(PIXYS_TARGET_PACKAGE)																															 "${CL_RED}
+	@echo -e ${CL_CYN}"=============================-Package Details-============================"${CL_RST}
+	@echo -e ${CL_CYN}"Folder Location: "${CL_MAG} $(PIXYS_TARGET_PACKAGE_FOLDER)${CL_RST}
+	@echo -e ${CL_CYN}"ZipName        : "${CL_MAG} $(PIXYS_VERSION).zip${CL_RST}
+	@echo -e ${CL_CYN}"MD5            : "${CL_MAG}" $(shell cat $(PIXYS_TARGET_PACKAGE).md5sum | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"Size           : "${CL_MAG}" $(shell du -hs $(PIXYS_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"Size(in bytes) : "${CL_MAG}" $(shell wc -c $(PIXYS_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"DateTime       : "${CL_MAG} $(PIXYS_BUILD_DATETIME)${CL_RST}
+	@echo -e ${CL_CYN}"Build Type     : "${CL_MAG} $(PIXYS_BUILD_TYPE)${CL_RST}
+	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
+	@echo -e ""
 
 pixys: bacon
