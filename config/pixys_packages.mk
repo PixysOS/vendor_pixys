@@ -7,7 +7,7 @@ PRODUCT_PACKAGES += \
      Turbo \
      WallpaperPickerGooglePrebuilt \
      CameraRoll \
-     WeatherClient \
+     WeatherProvider \
      MaterialFXPrebuilt \
      AmbientPlayHistoryProvider
 
@@ -104,9 +104,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-# Weather
+# WeatherProvider
 PRODUCT_COPY_FILES += \
-     vendor/pixys/prebuilt/common/etc/permissions/com.pixys.weather.client.xml:system/etc/permissions/com.pixys.weather.client.xml
+    vendor/pixys/prebuilt/common/etc/permissions/com.android.providers.weather.xml:system/etc/permissions/com.android.providers.weather.xml \
+    vendor/pixys/prebuilt/common/etc/default-permissions/com.android.providers.weather.xml:system/etc/default-permissions/com.android.providers.weather.xml
 
 # Telephony
 PRODUCT_PACKAGES += \
