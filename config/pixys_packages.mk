@@ -11,6 +11,10 @@ PRODUCT_PACKAGES += \
      MaterialFXPrebuilt \
      AmbientPlayHistoryProvider
 
+# Subs OMS
+PRODUCT_PACKAGES += \
+    SubstratumSignature
+
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
