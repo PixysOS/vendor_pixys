@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
      WeatherProvider \
      MaterialFXPrebuilt \
      AmbientPlayHistoryProvider \
-     OmniRecord
+     OmniRecord \
+     SoundPickerPrebuilt
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
