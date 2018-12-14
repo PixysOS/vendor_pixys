@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
      CameraRoll \
      WeatherClient \
      MaterialFXPrebuilt \
-     AmbientPlayHistoryProvider
+     AmbientPlayHistoryProvider \
+	 SoundPickerPrebuilt
 
 # SubstratumSignature Package
 PRODUCT_COPY_FILES += \
