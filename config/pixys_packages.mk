@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
      CameraRoll \
      WeatherClient \
      MaterialFXPrebuilt \
-     AmbientPlayHistoryProvider
+     AmbientPlayHistoryProvider \
+     OmniRecord
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
