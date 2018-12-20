@@ -9,7 +9,6 @@ PRODUCT_PACKAGES += \
      CameraRoll \
      WeatherProvider \
      MaterialFXPrebuilt \
-     AmbientPlayHistoryProvider \
      SoundPickerPrebuilt
 
 # Markup libs
