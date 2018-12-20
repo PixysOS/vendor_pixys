@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
      CameraRoll \
      WeatherProvider \
      MaterialFXPrebuilt \
-     AmbientPlayHistoryProvider
+     AmbientPlayHistoryProvider \
+     SoundPickerPrebuilt
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
