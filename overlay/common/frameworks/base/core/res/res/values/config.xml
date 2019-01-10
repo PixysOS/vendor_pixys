@@ -131,12 +131,6 @@
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 
-    <!-- Fonts -->
-    <string name="config_headlineFontFamily">google-sans</string>
-    <string name="config_headlineFontFamilyLight">google-sans</string>
-    <string name="config_headlineFontFeatureSettings">ss03</string>
-    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
-
     <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
     <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
 
