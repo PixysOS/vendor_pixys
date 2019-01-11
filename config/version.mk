@@ -15,18 +15,34 @@
 PIXYS_MOD_VERSION = v2.4
 
 ifndef PIXYS_BUILD_TYPE
-PIXYS_BUILD_TYPE := UNOFFICIAL
-
+    PIXYS_BUILD_TYPE := UNOFFICIAL
 endif
 
-ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
+# Test Build Tag
+ifeq ($(PIXYS_TEST),true)
+    PIXYS_BUILD_TYPE := NOOB
+endif
 
+CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+
+ifeq ($(PIXYS_OFFICIAL), true)
+   LIST = $(shell python vendor/pixys/tools/official.py)
+   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+      IS_OFFICIAL=true
+      PIXYS_BUILD_TYPE := OFFICIAL
+     
 PRODUCT_PACKAGES += \
     Updater
-
+	
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+       PIXYS_BUILD_TYPE := UNOFFICIAL
+       $(error Device is not official "$(FOUND)")
+    endif
 endif
 
-TARGET_PRODUCT_SHORT := $(subst apixysos_,,$(PIXYS_BUILD))
+TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
 
 PIXYS_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 PIXYS_BUILD_DATETIME := $(shell date +%s)
