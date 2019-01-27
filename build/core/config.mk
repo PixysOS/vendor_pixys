@@ -20,7 +20,7 @@ include $(TOPDIR)vendor/pixys/build/core/mtk_target.mk
 include $(TOPDIR)vendor/pixys/build/core/qcom_target.mk
 
 # Build RRO packages as System apps
-BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/lineage/build/core/system_rro.mk
+BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/pixys/build/core/system_rro.mk
 
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
