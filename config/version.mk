@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 
 endif
 
-TARGET_PRODUCT_SHORT := $(subst apixysos_,,$(PIXYS_BUILD))
+TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
 
 PIXYS_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 PIXYS_BUILD_DATETIME := $(shell date +%s)
