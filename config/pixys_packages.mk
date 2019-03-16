@@ -6,6 +6,9 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     Longshot
 
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixys/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
