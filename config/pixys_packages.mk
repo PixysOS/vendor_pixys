@@ -113,3 +113,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
