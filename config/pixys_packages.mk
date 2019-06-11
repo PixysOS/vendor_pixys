@@ -10,7 +10,7 @@ PRODUCT_PACKAGES += \
      WeatherProvider \
      MaterialFXPrebuilt \
      SoundPickerPrebuilt \
-     SubstratumKey
+     SubstratumSignature
 
 # Markup libs
 ifeq ($(TARGET_ARCH),arm64)
