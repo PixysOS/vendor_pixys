@@ -18,11 +18,11 @@ function gerrit()
         if [[ ! -z $(git config --get remote.gerrit.url) ]]; then
             git remote rm gerrit;
         fi
-        [[ -z "${GERRIT_USER}" ]] && export GERRIT_USER=$(git config --get gerrit.pixysos.org.username);
+        [[ -z "${GERRIT_USER}" ]] && export GERRIT_USER=$(git config --get gerrit.pixysos.com.username);
         if [[ -z "${GERRIT_USER}" ]]; then
-            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e "s|https://github.com/PixysOS|ssh://gerrit.pixysos.org:29418/PixysOS|");
+            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e "s|https://github.com/PixysOS|ssh://gerrit.pixysos.com:29418/PixysOS|");
         else
-            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e "s|https://github.com/PixysOS|ssh://${GERRIT_USER}@gerrit.pixysos.org:29418/PixysOS|");
+            git remote add gerrit $(git remote -v | grep PixysOS | awk '{print $2}' | uniq | sed -e "s|https://github.com/PixysOS|ssh://${GERRIT_USER}@gerrit.pixysos.com:29418/PixysOS|");
         fi
     fi
 }
