@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     SettingsSuggestion \
     PixelTheme \
-    ThemePicker
+    ThemePicker \
+    Longshot
 
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
@@ -56,6 +57,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.pixys.rc \
     vendor/pixys/prebuilt/common/etc/permissions/privapp-permissions-google-wallpaper.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-wallpaper.xml \
+    vendor/pixys/prebuilt/common/etc/permissions/pixys-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pixys-hiddenapi-package-whitelist.xml \
+    vendor/pixys/prebuilt/common/etc/permissions/privapp-permissions-pixys-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pixys-system.xml
 
 # Pixys Theme
 include vendor/PixysTheme/config.mk
