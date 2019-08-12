@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     SettingsSuggestion \
     PixelTheme \
-    ThemePicker
+    ThemePicker \
+    Longshot
 
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixys/overlay
