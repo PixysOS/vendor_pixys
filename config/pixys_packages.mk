@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
     vendor/pixys/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
+# Priv-app Permissions
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/permissions/privapp-permissions.xml:system/etc/permissions/privapp-permissions.xml
+
 # Pixys Theme
 include vendor/pixys/themes/config.mk
 
