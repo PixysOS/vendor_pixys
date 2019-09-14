@@ -1,3 +1,7 @@
+# GApps
+include vendor/gapps/config.mk
+IS_PHONE := true
+
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 
