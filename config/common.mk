@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
 
+# system mount
+PRODUCT_COPY_FILES += \
+    vendor/pixys/build/tools/system-mount.sh:install/bin/system-mount.sh
+
 # Copy all Lineage-specific init rc files
 $(foreach f,$(wildcard vendor/pixys/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
