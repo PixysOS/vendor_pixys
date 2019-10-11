@@ -1,6 +1,9 @@
+# Additional package
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
-
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -9,7 +12,6 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
-
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
