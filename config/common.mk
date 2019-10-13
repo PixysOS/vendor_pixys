@@ -82,3 +82,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixys/overlay
 include vendor/pixys/config/bootanimation.mk
 
 include vendor/pixys/config/pixys_packages.mk
+
+# Fonts
+include vendor/pixys/config/fonts.mk
