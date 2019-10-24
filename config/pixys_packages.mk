@@ -53,6 +53,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.pixys.rc
 
+# Pixys Theme
+include vendor/PixysTheme/config.mk
+
 # Cutout control overlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
