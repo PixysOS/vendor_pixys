@@ -1,6 +1,7 @@
 # Additional package
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    SettingsSuggestion
 
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
