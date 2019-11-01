@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
 
 ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
+    PixysThemesStub \
     ThemePicker \
     Launcher3QuickStep
 endif
