@@ -1,7 +1,10 @@
 # Additional package
 PRODUCT_PACKAGES += \
     ThemePicker \
-    SettingsSuggestion
+    SettingsSuggestion \
+    PixelTheme \
+    DevicePersonalizationServices \
+    ThemePicker
 
 # Call Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
@@ -52,7 +55,8 @@ PRODUCT_PACKAGES += \
 
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.pixys.rc
+    vendor/pixys/prebuilt/common/etc/init.local.rc:system/etc/init/init.pixys.rc \
+    vendor/pixys/prebuilt/common/etc/permissions/privapp-permissions-google-wallpaper.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-wallpaper.xml \
 
 # Pixys Theme
 include vendor/PixysTheme/config.mk
