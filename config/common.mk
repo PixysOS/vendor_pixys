@@ -99,5 +99,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# PixelSetupWizard overlay
+PRODUCT_PACKAGES += \
+    PixelSetupWizardOverlay \
+    PixelSetupWizardAodOverlay
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixys/config/partner_gms.mk
