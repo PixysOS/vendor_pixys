@@ -3,7 +3,6 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     SettingsSuggestion \
     PixelTheme \
-    DevicePersonalizationServices \
     ThemePicker
 
 # Call Overlay
