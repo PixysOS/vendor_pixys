@@ -101,3 +101,9 @@ PRODUCT_SOONG_NAMESPACES += \
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
     TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
 endif
+
+ifneq ($(TARGET_USES_PREBUILT_CAMERA_SERVICE), true)
+PRODUCT_SOONG_NAMESPACES += \
+    frameworks/av/camera/cameraserver \
+    frameworks/av/services/camera/libcameraservice
+endif
