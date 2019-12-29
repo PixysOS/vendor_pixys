@@ -75,42 +75,9 @@ PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/fonts/GoogleSans-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Italic.ttf \
     vendor/pixys/prebuilt/fonts/GoogleSans-Medium.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Medium.ttf \
     vendor/pixys/prebuilt/fonts/GoogleSans-MediumItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-MediumItalic.ttf \
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Custom off-mode charger
-ifeq ($(WITH_XTENDED_CHARGER),true)
-PRODUCT_PACKAGES += \
-    xtended_charger_res_images \
-    font_log.png \
-    libhealthd.xtended
-endif
-
-# Filesystems tools
-PRODUCT_PACKAGES += \
-    fsck.exfat \
-    fsck.ntfs \
-    mke2fs \
-    mkfs.exfat \
-    mkfs.ntfs \
-    mount.ntfs
-
-# Openssh
-PRODUCT_PACKAGES += \
-    scp \
-    sftp \
-    ssh \
-    sshd \
-    sshd_config \
-    ssh-keygen \
-    start-ssh
-
-# rsync
-PRODUCT_PACKAGES += \
-    rsync
->>>>>>> 840c8607... Update Google Sans font style [2/2]
+    vendor/pixys/prebuilt/fonts/SamsungOne.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SamsungOne.ttf \
+    vendor/pixys/prebuilt/fonts/SlateFromOP-Light.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Light.ttf \
+    vendor/pixys/prebuilt/fonts/SlateFromOP-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Regular.ttf \
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
