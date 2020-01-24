@@ -54,6 +54,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/config/permissions/backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/backup.xml
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # Copy all Pixys-specific init rc files
 $(foreach f,$(wildcard vendor/pixys/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
