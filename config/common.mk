@@ -22,8 +22,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/pixys/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/pixys/prebuilt/common/bin/50-pixys.sh:system/addon.d/50-pixys.sh \
-    vendor/pixys/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/pixys/prebuilt/common/bin/50-pixys.sh:TARGET_COPY_OUT_SYSTEM)/addon.d/50-pixys.sh
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
