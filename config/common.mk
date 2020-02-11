@@ -5,6 +5,16 @@ include vendor/pixys/build/core/pixys_version.mk
 -include vendor/pixys/config/pixys_permissions.mk
 -include vendor/pixys/config/pixys_packages.mk
 
+# Apex
+# Enable Google Play system updates support
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/pixys/apex
+
+PRODUCT_PACKAGES += \
+    ModuleMetadataGooglePrebuilt
+
+DEVICE_PACKAGE_OVERLAYS += vendor/pixys/apex/overlay
+
 # Pixys Theme
 include vendor/PixysTheme/config.mk
 
