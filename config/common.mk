@@ -22,13 +22,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/pixys/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/pixys/prebuilt/common/bin/50-pixys.sh:TARGET_COPY_OUT_SYSTEM)/addon.d/50-pixys.sh
+    vendor/pixys/prebuilt/common/bin/50-pixys.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-pixys.sh
 
-ifeq ($(AB_OTA_UPDATER),true)
+ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
-    vendor/pixys/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/pixys/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/pixys/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/pixys/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/pixys/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/pixys/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
