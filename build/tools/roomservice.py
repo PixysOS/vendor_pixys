@@ -42,12 +42,12 @@ except ImportError:
 
 DEBUG = False
 
-custom_local_manifest = ".repo/local_manifests/pixel.xml"
-custom_default_revision = "oreo-mr1"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'oreo-mr1')
-custom_dependencies = "aosp.dependencies"
-org_manifest = "pixel-devices"  # leave empty if org is provided in manifest
-org_display = "PixelExperience-Devices"  # needed for displaying
+custom_local_manifest = ".repo/local_manifests/pixys.xml"
+custom_default_revision = "ten"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'ten')
+custom_dependencies = "pixys.dependencies"
+org_manifest = "pixys-devices"  # leave empty if org is provided in manifest
+org_display = "PixysOS-Devices"  # needed for displaying
 
 github_auth = None
 
