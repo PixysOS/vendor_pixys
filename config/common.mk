@@ -94,6 +94,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 include vendor/pixys/config/bootanimation.mk
 
 include vendor/pixys/config/pixys_packages.mk
-
-# Fonts
-include vendor/pixys/config/fonts.mk
