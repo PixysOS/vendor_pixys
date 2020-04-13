@@ -22,6 +22,9 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 endif
 
+# Skip SKIP ABI CHECKS
+SKIP_ABI_CHECKS=true
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
