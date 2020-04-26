@@ -33,25 +33,16 @@ from functools import cmp_to_key
 from xml.etree import ElementTree
 
 try:
-    import requests
+    # For python3
+    import urllib.error
+    import urllib.request
 except ImportError:
-    try:
-        # For python3
-        import urllib.error
-        import urllib.request
-    except ImportError:
-        # For python2
-        import imp
-        import urllib2
-        urllib = imp.new_module('urllib')
-        urllib.error = urllib2
-        urllib.request = urllib2
-
-
-# cmp() is not available in Python 3, define it manually
-# See https://docs.python.org/3.0/whatsnew/3.0.html#ordering-comparisons
-def cmp(a, b):
-    return (a > b) - (a < b)
+    # For python2
+    import imp
+    import urllib2
+    urllib = imp.new_module('urllib')
+    urllib.error = urllib2
+    urllib.request = urllib2
 
 
 # Verifies whether pathA is a subdirectory (or the same) as pathB
@@ -113,29 +104,11 @@ def fetch_query_via_ssh(remote_url, query):
 
 
 def fetch_query_via_http(remote_url, query):
-    if "requests" in sys.modules:
-        auth = None
-        if os.path.isfile(os.getenv("HOME") + "/.gerritrc"):
-            f = open(os.getenv("HOME") + "/.gerritrc", "r")
-            for line in f:
-                parts = line.rstrip().split("|")
-                if parts[0] in remote_url:
-                    auth = requests.auth.HTTPBasicAuth(username=parts[1], password=parts[2])
-        statusCode = '-1'
-        if auth:
-            url = '{0}/a/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-            data = requests.get(url, auth=auth)
-            statusCode = str(data.status_code)
-        if statusCode != '200':
-            #They didn't get good authorization or data, Let's try the old way
-            url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-            data = requests.get(url)
-        reviews = json.loads(data.text[5:])
-    else:
-        """Given a query, fetch the change numbers via http"""
-        url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
-        data = urllib.request.urlopen(url).read().decode('utf-8')
-        reviews = json.loads(data[5:])
+
+    """Given a query, fetch the change numbers via http"""
+    url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
+    data = urllib.request.urlopen(url).read().decode('utf-8')
+    reviews = json.loads(data[5:])
 
     for review in reviews:
         review['number'] = review.pop('_number')
@@ -153,12 +126,12 @@ def fetch_query(remote_url, query):
         raise Exception('Gerrit URL should be in the form http[s]://hostname/ or ssh://[user@]host[:port]')
 
 if __name__ == '__main__':
-    # Default to LineageOS Gerrit
-    default_gerrit = 'https://review.lineageos.org'
+    # Default to PixysOS Gerrit
+    default_gerrit = 'https://gerrit.pixysos.com'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
-        patches from LineageOS's Gerrit instance (or any gerrit instance of your choosing)
+        patches from PixysOS Gerrit instance (or any gerrit instance of your choosing)
 
         Given a list of change numbers, repopick will cd into the project path
         and cherry pick the latest patch available.
@@ -282,7 +255,7 @@ if __name__ == '__main__':
             return cmp(review_a['number'], review_b['number'])
 
     if args.topic:
-        reviews = fetch_query(args.gerrit, 'topic:{0}'.format(args.topic))
+        reviews = fetch_query(args.gerrit, 'status:open+topic:{0}'.format(args.topic))
         change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
     if args.query:
         reviews = fetch_query(args.gerrit, args.query)
@@ -329,7 +302,7 @@ if __name__ == '__main__':
 
         mergables.append({
             'subject': review['subject'],
-            'project': review['project'],
+            'project': review['project'].split('/')[1],
             'branch': review['branch'],
             'change_id': review['change_id'],
             'change_number': review['number'],
@@ -366,13 +339,11 @@ if __name__ == '__main__':
             project_path = project_name_to_data[item['project']][item['branch']]
         elif args.path:
             project_path = args.path
-        elif item['project'] in project_name_to_data and len(project_name_to_data[item['project']]) == 1:
-            local_branch = list(project_name_to_data[item['project']])[0]
-            project_path = project_name_to_data[item['project']][local_branch]
-            print('WARNING: Project {0} has a different branch ("{1}" != "{2}")'.format(project_path, local_branch, item['branch']))
         elif args.ignore_missing:
             print('WARNING: Skipping {0} since there is no project directory for: {1}\n'.format(item['id'], item['project']))
             continue
+        elif item['project'] == 'manifest':
+            project_path = '.repo/manifests'
         else:
             sys.stderr.write('ERROR: For {0}, could not determine the project path for project {1}\n'.format(item['id'], item['project']))
             sys.exit(1)
@@ -392,11 +363,7 @@ if __name__ == '__main__':
         for i in range(0, check_picked_count):
             if subprocess.call(['git', 'cat-file', '-e', 'HEAD~{0}'.format(i)], cwd=project_path, stderr=open(os.devnull, 'wb')):
                 continue
-            output = subprocess.check_output(['git', 'show', '-q', 'HEAD~{0}'.format(i)], cwd=project_path)
-            # make sure we have a string on Python 3
-            if isinstance(output, bytes):
-                output = output.decode('utf-8')
-            output = output.split()
+            output = subprocess.check_output(['git', 'show', '-q', 'HEAD~{0}'.format(i)], cwd=project_path).split()
             if 'Change-Id:' in output:
                 head_change_id = ''
                 for j,t in enumerate(reversed(output)):
@@ -412,7 +379,7 @@ if __name__ == '__main__':
 
         # Print out some useful info
         if not args.quiet:
-            print(u'--> Subject:       "{0}"'.format(item['subject']))
+            print('--> Subject:       "{0}"'.format(item['subject'].encode('utf-8')))
             print('--> Project path:  {0}'.format(project_path))
             print('--> Change number: {0} (Patch Set {1})'.format(item['id'], item['patchset']))
 
@@ -421,45 +388,22 @@ if __name__ == '__main__':
         else:
             method = 'ssh'
 
-        # Try fetching from GitHub first if using default gerrit
-        if args.gerrit == default_gerrit:
-            if args.verbose:
-                print('Trying to fetch the change from GitHub')
+        if args.verbose:
+            print('Fetching from {0}'.format(args.gerrit))
 
-            if args.pull:
-                cmd = ['git pull --no-edit github', item['fetch'][method]['ref']]
-            else:
-                cmd = ['git fetch github', item['fetch'][method]['ref']]
-            if args.quiet:
-                cmd.append('--quiet')
-            else:
-                print(cmd)
-            result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
-            FETCH_HEAD = '{0}/.git/FETCH_HEAD'.format(project_path)
-            if result != 0 and os.stat(FETCH_HEAD).st_size != 0:
-                print('ERROR: git command failed')
-                sys.exit(result)
-        # Check if it worked
-        if args.gerrit != default_gerrit or os.stat(FETCH_HEAD).st_size == 0:
-            # If not using the default gerrit or github failed, fetch from gerrit.
-            if args.verbose:
-                if args.gerrit == default_gerrit:
-                    print('Fetching from GitHub didn\'t work, trying to fetch the change from Gerrit')
-                else:
-                    print('Fetching from {0}'.format(args.gerrit))
+        if args.pull:
+            cmd = ['git pull --no-edit', item['fetch'][method]['url'], item['fetch'][method]['ref']]
+        else:
+            cmd = ['git fetch', item['fetch'][method]['url'], item['fetch'][method]['ref']]
+        if args.quiet:
+            cmd.append('--quiet')
+        else:
+            print(cmd)
+        result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
+        if result != 0:
+            print('ERROR: git command failed')
+            sys.exit(result)
 
-            if args.pull:
-                cmd = ['git pull --no-edit', item['fetch'][method]['url'], item['fetch'][method]['ref']]
-            else:
-                cmd = ['git fetch', item['fetch'][method]['url'], item['fetch'][method]['ref']]
-            if args.quiet:
-                cmd.append('--quiet')
-            else:
-                print(cmd)
-            result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
-            if result != 0:
-                print('ERROR: git command failed')
-                sys.exit(result)
         # Perform the cherry-pick
         if not args.pull:
             cmd = ['git cherry-pick --ff FETCH_HEAD']
@@ -469,19 +413,12 @@ if __name__ == '__main__':
                 cmd_out = None
             result = subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
             if result != 0:
-                cmd = ['git diff-index --quiet HEAD --']
-                result = subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                if result == 0:
-                    print('WARNING: git command resulted with an empty commit, aborting cherry-pick')
-                    cmd = ['git cherry-pick --abort']
-                    subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                elif args.reset:
+                if args.reset:
                     print('ERROR: git command failed, aborting cherry-pick')
                     cmd = ['git cherry-pick --abort']
                     subprocess.call(cmd, cwd=project_path, shell=True, stdout=cmd_out, stderr=cmd_out)
-                    sys.exit(result)
                 else:
                     print('ERROR: git command failed')
-                    sys.exit(result)
+                sys.exit(result)
         if not args.quiet:
             print('')
