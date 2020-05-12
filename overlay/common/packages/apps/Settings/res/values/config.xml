@@ -20,6 +20,6 @@
     <string name="config_wallpaper_picker_package" translatable="false">com.google.android.apps.wallpaper</string>
     <string name="config_wallpaper_picker_class" translatable="false">com.google.android.apps.wallpaper.picker.CategoryPickerActivity</string>
 
-    <bool name="config_show_avatar_in_homepage">true</bool>
+    <bool name="config_show_avatar_in_homepage">false</bool>
 
 </resources>
