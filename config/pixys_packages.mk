@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
     RepainterServicePriv \
-    GameSpace
+    GameSpace \
+    TouchGestures
 
 ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
