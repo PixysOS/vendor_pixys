@@ -77,3 +77,6 @@ ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
+
+# Potato Plugins
+-include packages/apps/Plugins/plugins.mk
