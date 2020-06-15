@@ -50,6 +50,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.functions \
     system/bin/backuptool_postinstall.sh
 
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/pixys/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/pixys/config/permissions/backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/backup.xml
