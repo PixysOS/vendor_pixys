@@ -1,4 +1,6 @@
 # Platform names
+KONA := kona #SM8250
+LITO := lito #SM7250
 MSMNILE := msmnile #SM8150
 MSMSTEPPE := sm6150
 TRINKET := trinket #SM6125
@@ -10,7 +12,8 @@ UM_3_18_FAMILY := msm8937 msm8953 msm8996
 UM_4_4_FAMILY := msm8998 sdm660
 UM_4_9_FAMILY := sdm845 sdm710
 UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET)
-UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
+UM_4_19_FAMILY := $(KONA) $(LITO)
+UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
 
 BOARD_USES_ADRENO := true
 
@@ -42,7 +45,7 @@ ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 endif
 
 # Enable DRM PP driver on UM platforms that support it
-ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     TARGET_USES_DRM_PP := true
 endif
 
