@@ -11,7 +11,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/pixys/apex
 
 PRODUCT_PACKAGES += \
-    ModuleMetadataGooglePrebuilt
+    ModuleMetadataGoogle
 
 # Pixys Theme
 include vendor/PixysTheme/config.mk
