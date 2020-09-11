@@ -5,13 +5,10 @@ include vendor/pixys/build/core/pixys_version.mk
 -include vendor/pixys/config/pixys_permissions.mk
 -include vendor/pixys/config/pixys_packages.mk
 
-# Apex
-# Enable Google Play system updates support
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/pixys/apex
-
-PRODUCT_PACKAGES += \
-    ModuleMetadataGoogle
+ifneq ($(TARGET_SUPPORT_APEX),false)
+# Inherit from apex config
+$(call inherit-product, vendor/pixys/config/apex.mk)
+endif
 
 # Pixys Theme
 include vendor/PixysTheme/config.mk
