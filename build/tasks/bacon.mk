@@ -24,10 +24,12 @@ PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION).zip
 PIXYS_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 PIXYS_BUILD_TIME := 
 
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+
 .PHONY: bacon pixys
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXYS_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(PIXYS_TARGET_PACKAGE) > $(PIXYS_TARGET_PACKAGE).md5sum
+	$(hide) $(MD5) $(PIXYS_TARGET_PACKAGE) > $(PIXYS_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_BLU}"																																 "${CL_BLU}
 	@echo -e ${CL_BLU}"                                                                                                                              "${CL_BLU}
 	@echo -e ${CL_BLU}"                                                                                                                              "${CL_BLU}
