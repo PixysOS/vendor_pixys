@@ -59,6 +59,7 @@
 #                                          modules in system instead of vendor
 
 ifneq ($(TARGET_NO_KERNEL),true)
+ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
 
 ## Externally influenced variables
 KERNEL_SRC := $(TARGET_KERNEL_SOURCE)
@@ -353,4 +354,5 @@ endif
 dtbimage: $(INSTALLED_DTBIMAGE_TARGET)
 endif # BOARD_INCLUDE_DTB_IN_BOOTIMG
 
+endif # TARGET_NO_KERNEL_OVERRIDE
 endif # TARGET_NO_KERNEL
