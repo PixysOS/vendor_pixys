@@ -1,12 +1,12 @@
 # Additional package
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ThemePicker \
     SettingsSuggestion \
     PixelTheme \
     Longshot
 
 # Cutout control overlay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixys/overlay

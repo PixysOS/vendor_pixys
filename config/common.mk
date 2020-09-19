@@ -6,7 +6,7 @@ include vendor/pixys/build/core/pixys_version.mk
 -include vendor/pixys/config/pixys_packages.mk
 
 # Pixys Theme
-include vendor/PixysTheme/config.mk
+#include vendor/PixysTheme/config.mk
 
 # Bootanimation
 include vendor/pixys/bootanimation/bootanimation.mk
