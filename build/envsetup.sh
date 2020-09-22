@@ -51,10 +51,10 @@ function mka() {
    if [ "$T" ]; then
        case `uname -s` in
            Darwin)
-               make -C $T -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
+               m "$@" -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
                ;;
            *)
-               schedtool -B -n 1 -e ionice -n 1 make -C $T -j$(cat /proc/cpuinfo | grep "^processor" | wc -l) "$@"
+               m "$@" -j$(cat /proc/cpuinfo | grep "^processor" | wc -l) "$@"
                ;;
        esac
      else
