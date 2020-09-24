@@ -1,5 +1,5 @@
 # Additional package
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     ThemePicker \
     SettingsSuggestion \
     PixelTheme \
