@@ -1,5 +1,5 @@
 # Copyright (C) 2017 Unlegacy-Android
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017,2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION).zip
 PIXYS_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 PIXYS_BUILD_TIME := 
 
-MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 .PHONY: bacon pixys
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
