@@ -46,8 +46,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/pixys/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/pixys/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/pixys/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/pixys/prebuilt/common/bin/backuptool.functions:$(TARGET_COPYT_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/pixys/prebuilt/common/bin/50-pixys.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-pixys.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
