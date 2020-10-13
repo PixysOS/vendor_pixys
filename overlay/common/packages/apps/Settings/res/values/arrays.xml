@@ -18,9 +18,11 @@
 -->
 <resources>
     <string-array name="config_order_audio_and_caption_services">
+        <item>com.google.android.accessibility.soundamplifier/com.google.android.accessibility.soundamplifier.ui.SoundAmplifierSettingActivity</item>
         <item>com.google.android.accessibility.soundamplifier/com.google.android.accessibility.soundamplifier.SoundAmplifierService</item>
         <item>toggle_master_mono</item>
         <item>seekbar_master_balance</item>
+        <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.scribe.MainActivity</item>
         <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.scribe.SpeechToTextAccessibilityService</item>
         <item>live_caption</item>
         <item>captioning_preference_screen</item>
@@ -28,7 +30,9 @@
     </string-array>
 
     <string-array name="config_preinstalled_audio_and_caption_services">
+        <item>com.google.android.accessibility.soundamplifier/com.google.android.accessibility.soundamplifier.ui.SoundAmplifierSettingActivity</item>
         <item>com.google.android.accessibility.soundamplifier/com.google.android.accessibility.soundamplifier.SoundAmplifierService</item>
+        <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.scribe.MainActivity</item>
         <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.scribe.SpeechToTextAccessibilityService</item>
     </string-array>
 
