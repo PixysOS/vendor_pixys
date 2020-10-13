@@ -11,7 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -31,17 +31,22 @@
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
     <bool name="config_smart_battery_available">true</bool>
     <string name="config_defaultAppPredictionService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
+    <string name="config_defaultAugmentedAutofillService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService</string>
+    <string name="config_defaultAttentionService">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionServ</string>
+    <string name="config_defaultContentCaptureService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService</string>
     <string name="config_defaultContentSuggestionsService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+    <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera:com.google.android.gms:com.google.intelligence.sense:com.google.android.settings.intelligence:com.google.android.apps.wellbeing:com.google.android.apps.safetyhub</string>
+    <string name="config_defaultListenerAccessPackages">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
+    <string name="config_defaultSupervisionProfileOwnerComponent">com.google.android.gms/.kids.account.receiver.ProfileOwnerReceiver</string>
     <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
     <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
-    <string name="config_defaultListenerAccessPackages">com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
     <bool name="config_buttonTextAllCaps">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_sendPackageName">true</bool>
-    <item type="dimen" name="config_fullTaskSnapshotScale">0.8</item>
     <integer name="config_maxShortcutTargetsPerApp">8</integer>
     <integer name="config_storageManagerDaystoRetainDefault">60</integer>
+    <string name="config_incidentReportApproverPackage">com.google.android.permissioncontroller</string>
 
     <!-- The package name for the default wellbeing app.
          This package must be trusted, as it has the permissions to control other applications
@@ -79,5 +84,5 @@
         <item>cx.ring</item>
         <item>org.briarproject.briar.android</item>
     </string-array>
-</resources>
 
+</resources>
