@@ -1,12 +1,4 @@
 bootstrap_go_package {
-    name: "soong-pixys",
-    pkgPath: "pixys/soong/android",
-    srcs: [
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
     name: "soong-pixys-generator",
     pkgPath: "pixys/soong/generator",
     deps: [
