@@ -1,5 +1,6 @@
 # Additional package
 PRODUCT_PACKAGES += \
+    PixelThemesStub \
     ThemePicker
 
 # Cutout control overlay
