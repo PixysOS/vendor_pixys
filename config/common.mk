@@ -107,5 +107,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# Inherit from sepolicy config
+$(call inherit-product, vendor/pixys/config/sepolicy.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixys/config/partner_gms.mk
