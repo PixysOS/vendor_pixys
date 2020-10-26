@@ -1,6 +1,7 @@
 # Additional package
 PRODUCT_PACKAGES += \
     PixelThemesStub \
+    Flipendo \
     ThemePicker
 
 # Cutout control overlay
