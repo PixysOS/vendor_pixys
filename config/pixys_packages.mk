@@ -1,6 +1,7 @@
 # Additional package
 PRODUCT_PACKAGES += \
     PixelThemesStub \
+    DevicePersonalizationPrebuiltPixel2020 \
     Flipendo \
     ThemePicker
 
