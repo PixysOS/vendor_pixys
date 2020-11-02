@@ -15,4 +15,6 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-	vendor/pixys/sepolicy/vendor
+	hardware/google/pixel-sepolicy/flipendo \
+	hardware/google/pixel-sepolicy/googlebattery \
+	hardware/google/pixel-sepolicy/turbo_adapter
