@@ -64,3 +64,7 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
