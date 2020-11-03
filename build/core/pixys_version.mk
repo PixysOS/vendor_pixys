@@ -15,16 +15,16 @@
 PIXYS_MOD_VERSION = v4.0.2
 
 ifndef PIXYS_BUILD_TYPE
-PIXYS_BUILD_TYPE := BETA
+PIXYS_BUILD_TYPE := UNOFFICIAL
 
 endif
 
-#ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
+ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
 
-#PRODUCT_PACKAGES += \
-#    Updater
+PRODUCT_PACKAGES += \
+    Updater
 
-#endif
+endif
 
 TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
 
