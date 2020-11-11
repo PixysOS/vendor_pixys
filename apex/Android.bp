@@ -22,6 +22,7 @@ prebuilt_apex {
     name: "com.google.android.adbd",
     src: "com.google.android.adbd.apex",
     overrides: ["com.android.adbd"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -31,6 +32,7 @@ prebuilt_apex {
     name: "com.google.android.cellbroadcast",
     src: "com.google.android.cellbroadcast.apex",
     overrides: ["com.android.cellbroadcast"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -40,6 +42,7 @@ prebuilt_apex {
     name: "com.google.android.conscrypt",
     src: "com.google.android.conscrypt.apex",
     overrides: ["com.android.conscrypt"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -49,6 +52,7 @@ prebuilt_apex {
     name: "com.google.android.extservices",
     src: "com.google.android.extservices.apex",
     overrides: ["com.android.extservices"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -58,6 +62,7 @@ prebuilt_apex {
     name: "com.google.android.ipsec",
     src: "com.google.android.ipsec.apex",
     overrides: ["com.android.ipsec"],
+    presigned: true,    
     owner: "google",
     prefer: true,
 }
@@ -67,6 +72,7 @@ prebuilt_apex {
     name: "com.google.android.media",
     src: "com.google.android.media.apex",
     overrides: ["com.android.media"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -76,6 +82,7 @@ prebuilt_apex {
     name: "com.google.android.media.swcodec",
     src: "com.google.android.media.swcodec.apex",
     overrides: ["com.android.media.swcodec"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -85,6 +92,7 @@ prebuilt_apex {
     name: "com.google.android.mediaprovider",
     src: "com.google.android.mediaprovider.apex",
     overrides: ["com.android.mediaprovider"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -94,6 +102,7 @@ prebuilt_apex {
     name: "com.google.android.neuralnetworks",
     src: "com.google.android.neuralnetworks.apex",
     overrides: ["com.android.neuralnetworks"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -103,6 +112,7 @@ prebuilt_apex {
     name: "com.google.android.os.statsd",
     src: "com.google.android.os.statsd.apex",
     overrides: ["com.android.os.statsd"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -112,6 +122,7 @@ prebuilt_apex {
     name: "com.google.android.permission",
     src: "com.google.android.permission.apex",
     overrides: ["com.android.permission"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -121,6 +132,7 @@ prebuilt_apex {
     name: "com.google.android.resolv",
     src: "com.google.android.resolv.apex",
     overrides: ["com.android.resolv"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -130,6 +142,7 @@ prebuilt_apex {
     name: "com.google.android.sdkext",
     src: "com.google.android.sdkext.apex",
     overrides: ["com.android.sdkext"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -139,6 +152,7 @@ prebuilt_apex {
     name: "com.google.android.telephony",
     src: "com.google.android.telephony.apex",
     overrides: ["com.android.telephony"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
@@ -148,6 +162,7 @@ prebuilt_apex {
     name: "com.google.android.tzdata2",
     src: "com.google.android.tzdata2.apex",
     overrides: ["com.android.tzdata"],
+    presigned: true,
     owner: "google",
     prefer: true,
 }
