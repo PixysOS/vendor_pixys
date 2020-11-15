@@ -27,7 +27,8 @@ PIXYS_BUILD_TIME :=
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 .PHONY: bacon pixys
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
+bacon: $(INTERNAL_OTA_PACKAGE_TARGET) \
+       $(INTERNAL_OTATOOLS_FILES)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXYS_TARGET_PACKAGE)
 	$(hide) $(MD5) $(PIXYS_TARGET_PACKAGE) > $(PIXYS_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_BLU}"																																 "${CL_BLU}
