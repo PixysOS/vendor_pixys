@@ -54,6 +54,12 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.apps.wallpaper">
+	<permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
+        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.google.android.contacts">
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
     </privapp-permissions>
