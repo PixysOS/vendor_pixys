@@ -41,7 +41,6 @@
     <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
     <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
-    <string name="config_wallpaperCropperPackage">com.google.android.apps.wallpaper</string>
     <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
     <bool name="config_buttonTextAllCaps">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
