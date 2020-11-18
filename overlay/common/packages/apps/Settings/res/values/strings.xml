@@ -30,8 +30,8 @@
     <string name="config_nearby_devices_slice_uri">content://com.google.android.gms.nearby.fastpair/device_status_list_item</string>
     <string name="config_grayscale_settings_intent">intent:#Intent;action=com.google.android.apps.wellbeing.action.WIND_DOWN;launchFlags=0x10000000;end</string>
     <string name="config_styles_and_wallpaper_picker_class">com.android.customization.picker.CustomizationPickerActivity</string>
-    <string name="config_wallpaper_picker_class">com.google.android.apps.wallpaper.picker.CategoryPickerActivity</string>
-    <string name="config_wallpaper_picker_package">com.google.android.apps.wallpaper</string>
+    <string name="config_wallpaper_picker_class">com.android.customization.picker.CustomizationPickerActivity</string>
+    <string name="config_wallpaper_picker_package">com.android.wallpaper</string> 
 
     <!-- Help URI -->
     <string name="help_uri_about">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_about;end</string>

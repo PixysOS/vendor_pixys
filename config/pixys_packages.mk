@@ -1,8 +1,8 @@
 # Additional package
 PRODUCT_PACKAGES += \
     PixelThemesStub \
-    WallpaperPickerGoogleRelease \
     DevicePersonalizationPrebuiltPixel2020 \
+    WallpaperPickerGoogleRelease \
     Flipendo \
     ThemePicker
 
