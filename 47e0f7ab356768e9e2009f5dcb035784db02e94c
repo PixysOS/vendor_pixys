@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5234b4fa_c8e88e2d",
+        "filename": "config/common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000050
+      },
+      "writtenOn": "2020-11-19T17:05:03Z",
+      "side": 1,
+      "message": "no one noticed this typo? XD",
+      "range": {
+        "startLine": 51,
+        "startChar": 71,
+        "endLine": 51,
+        "endChar": 72
+      },
+      "revId": "47e0f7ab356768e9e2009f5dcb035784db02e94c",
+      "serverId": "dc9c43de-f401-424a-9bd3-945633c9f028",
+      "unresolved": true
+    }
+  ]
+}
