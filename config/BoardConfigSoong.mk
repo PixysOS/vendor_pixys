@@ -20,9 +20,19 @@ SOONG_CONFIG_NAMESPACES += pixysVarsPlugin
 
 SOONG_CONFIG_pixysVarsPlugin :=
 
+SOONG_CONFIG_NAMESPACES += pixysGlobalVars
+SOONG_CONFIG_pixysGlobalVars :=
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars += force_build_fingerprint
+endif
+
 define addVar
   SOONG_CONFIG_pixysVarsPlugin += $(1)
   SOONG_CONFIG_pixysVarsPlugin_$(1) := $$(subst ",\",$$($1))
 endef
+
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars_force_build_fingerprint := $(TARGET_FORCE_BUILD_FINGERPRINT)
+endif
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
