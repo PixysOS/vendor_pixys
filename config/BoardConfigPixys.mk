@@ -1,3 +1,6 @@
+# Safetynet
+TARGET_FORCE_BUILD_FINGERPRINT := google/redfin/redfin:11/RD1A.201105.003.C1/6886399:user/release-keys
+
 # Charger
 ifeq ($(WITH_LINEAGE_CHARGER),true)
     BOARD_HAL_STATIC_LIBRARIES := libhealthd.lineage
