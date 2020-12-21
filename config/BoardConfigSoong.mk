@@ -37,6 +37,7 @@ SOONG_CONFIG_pixysGlobalVars += \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
+    target_uses_prebuilt_dynamic_partitions \
     target_surfaceflinger_fod_lib \
     uses_camera_parameter_lib
 
@@ -86,6 +87,7 @@ SOONG_CONFIG_pixysGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_pixysGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_pixysGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_pixysGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
+SOONG_CONFIG_pixysGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_pixysGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_pixysQcomVars_qcom_soong_namespace := $(QCOM_SOONG_NAMESPACE)
