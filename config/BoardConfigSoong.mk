@@ -31,6 +31,7 @@ SOONG_CONFIG_NAMESPACES += pixysGlobalVars
 SOONG_CONFIG_pixysGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
+    camera_needs_client_info \
     has_legacy_camera_hal1 \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
@@ -68,6 +69,7 @@ endif
 SOONG_CONFIG_pixysGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_pixysGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_pixysGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
+SOONG_CONFIG_pixysGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_pixysNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_pixysQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_pixysQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
