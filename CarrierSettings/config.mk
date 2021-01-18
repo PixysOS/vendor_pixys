@@ -14,9 +14,12 @@
 # limitations under the License.
 #
 
-# CarrierSettings, replace CarrierConfig
+# Carrier apps , from gapps repo
 PRODUCT_PACKAGES += \
-    CarrierSettings
+    CarrierSettings \
+    CarrierMetrics \
+    CarrierServices \
+    CarrierSetup
 
 #
 # Carrier configs by Google, parsed by CarrierSettings
