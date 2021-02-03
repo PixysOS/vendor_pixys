@@ -69,3 +69,9 @@ PRODUCT_PACKAGES += \
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
+
+# FOD Animations
+ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    FodAnimationResources
+endif
