@@ -123,6 +123,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# IORap app launch prefetching using Perfetto traces and madvise
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.iorapd.enable=true
+
 # Ringtones
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Andromeda.ogg \
