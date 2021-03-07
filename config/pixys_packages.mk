@@ -4,7 +4,9 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogleRelease \
     DevicePersonalizationPrebuiltPixel2020 \
     Flipendo \
-    ThemePicker
+    ThemePicker \
+    StitchImage \
+    StitchImageService
 
 # Cutout control overlay
 #PRODUCT_PACKAGES += \
