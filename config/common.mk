@@ -118,6 +118,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# Ringtones
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Andromeda.ogg \
+    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.alarm_alert=Hassium.ogg
+
 # Inherit from sepolicy config
 $(call inherit-product, vendor/pixys/config/sepolicy.mk)
 
