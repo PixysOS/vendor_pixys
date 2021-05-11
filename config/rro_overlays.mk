@@ -25,7 +25,9 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlayActiveEdge \
     PixelFwResOverlay \
     GoogleConfigOverlay \
-    SystemUIGoogleOverlay
+    SystemUIGoogleOverlay \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
 
 ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
 PRODUCT_PACKAGES += \
