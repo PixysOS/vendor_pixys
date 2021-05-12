@@ -45,6 +45,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.show_pixel_tos=true \
     setupwizard.feature.device_default_dark_mode=true
 
+# DRM Service
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 # IME
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.bs_theme=true \
