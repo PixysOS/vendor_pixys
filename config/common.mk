@@ -25,6 +25,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/addon.d/50-superior.sh
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/pixys/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -41,6 +44,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 endif
 endif
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/backuptool_ab.sh \
+    system/bin/backuptool_ab.functions \
+    system/bin/backuptool_postinstall.sh
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
