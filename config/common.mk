@@ -8,6 +8,8 @@ include vendor/pixys/build/core/pixys_version.mk
 # Pixys Theme
 include vendor/PixysTheme/config.mk
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/aosp/config/device_framework_matrix.xml
+
 # Bootanimation
 include vendor/pixys/bootanimation/bootanimation.mk
 
