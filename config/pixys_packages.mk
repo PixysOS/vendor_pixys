@@ -72,12 +72,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     QuickAccessWallet
 
-# FOD Animations
-ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    FodAnimationResources
-endif
-
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
