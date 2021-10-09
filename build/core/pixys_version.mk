@@ -31,7 +31,8 @@ TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS),true)
 IS_PHONE := true
-$(call inherit-product, vendor/pixys/config/gapps.mk)
+$(call inherit-product, vendor/gapps/config.mk)
+$(call inherit-product, vendor/pixys/config/rro_overlays.mk)
 
 PIXYS_EDITION := GAPPS
 PIXYS_BUILD_DATETIME := $(shell date +%s)
