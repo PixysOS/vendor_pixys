@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2013 The CyanogenMod Project
-               (C) 2017-2019 The LineageOS Project
+               (C) 2017 The LineageOS Project
+               (c) 2018 The PixelExperience Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,35 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Package name(s) containing location provider support.
-         These packages can contain services implementing location providers,
-         such as the Geocode Provider, Network Location Provider, and Fused
-         Location Provider.
-         The signatures of packages named below and installed in the system
-         image are "allowed" signatures.
-         The location framework checks ALL installed packages if they provide
-         an implementation of a specific location provider and compares the
-         signature of the package with the list of allowed signatures.
-
-         The location framework has support for installation of new or
-         updated location providers at run-time. However the new package must
-         have a signature that matches the signature of at least one package
-         on this list which is installed in the system image.
-
-         The chosen package for the specific location provider does not
-         depend on the order of this list. -->
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-        <!-- The MicroG Unified location provider -->
-        <item>org.microg.nlp</item>
-    </string-array>
-
-    <bool name="config_cellBroadcastAppLinks">true</bool>
-
-    <!-- Disable stock OTA components if installed -->
+    <!-- Disable stock components if installed -->
     <string-array name="config_globallyDisabledComponents" translatable="false">
         <item>com.android.vending/com.google.android.finsky.systemupdate.SystemUpdateSettingsContentProvider</item>
         <item>com.android.vending/com.google.android.finsky.systemupdateactivity.SettingsSecurityEntryPoint</item>
@@ -52,10 +25,15 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
+        <item>com.google.android.dialer/com.android.dialer.rtt.settings.impl.gateway.RttSettingsDeepLink</item>
     </string-array>
 
-    <!-- Enable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
+    <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
@@ -66,90 +44,20 @@
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- If this is true, long press on power button will be available from a
-         non-interactive state. -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
-
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
-   <!-- Set icon mask to circle -->
-   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
-
-    <!-- Whether action menu items should be displayed in ALLCAPS or not.
-         Defaults to true. If this is not appropriate for specific locales
-         it should be disabled in that locale's resources. -->
-    <bool name="config_buttonTextAllCaps">false</bool>
-
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
-
-    <!-- Whether or not we should show the option to show battery percentage -->
-    <bool name="config_battery_percentage_setting_available">false</bool>
-
-    <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
-
-    <!-- List of packages that can use the Conversation space for their category messages
-    notifications until they target R -->
-    <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
-        <item>com.facebook.orca</item>
-        <item>com.instagram.android</item>
-        <item>com.whatsapp</item>
-        <item>com.snapchat.android</item>
-        <item>jp.naver.line.android</item>
-        <item>com.kakao.talk</item>
-        <item>com.discord</item>
-        <item>org.thoughtcrime.securesms</item>
-        <item>com.groupme.android</item>
-        <item>org.telegram.messenger</item>
-        <item>com.twitter.android</item>
-        <item>com.viber.voip</item>
-        <item>com.linkedin.android</item>
-        <item>com.tencent.mm</item>
-        <item>nekox.messenger</item>
-        <item>org.telegram.plus</item>
-        <item>org.thunderdog.challegram</item>
-        <item>im.vector.app</item>
-        <item>cx.ring</item>
-        <item>org.briarproject.briar.android</item>
-    </string-array>
+    <!-- If this is true, long press on power button will be available from a
+         non-interactive state. -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
-
-    <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
-         handle wallpaper cropping.
-    -->
-    <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
-
-    <!-- Control the behavior when the user long presses the power button.
-            0 - Nothing
-            1 - Global actions menu
-            2 - Power off (with confirmation)
-            3 - Power off (without confirmation)
-            4 - Go to voice assist
-            5 - Go to assistant (Settings.Secure.ASSISTANT)
-    -->
-    <integer name="config_longPressOnPowerBehavior">1</integer>
-
-    <!-- Control the behavior when the user presses the power and volume up buttons together.
-            0 - Nothing
-            1 - Mute toggle
-            2 - Global actions menu
-    -->
-    <integer name="config_keyChordPowerVolumeUp">1</integer>
-
-    <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">64</integer>
 </resources>

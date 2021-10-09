@@ -57,7 +57,6 @@ PRODUCT_COPY_FILES += \
 # Enable one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
@@ -73,7 +72,6 @@ PRODUCT_COPY_FILES += \
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
-
 
 # Include AOSP audio files
 include vendor/pixys/config/aosp_audio.mk
@@ -120,5 +118,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixys/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
+
+# rro_overlays
+$(call inherit-product, vendor/pixys/config/rro_overlays.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
