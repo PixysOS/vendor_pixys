@@ -16,4 +16,5 @@
     <bool name="flag_conversations">true</bool>
     <bool name="flag_charging_ripple">true</bool>
     <bool name="flag_combined_status_bar_signal_icons">true</bool>
+    <bool name="are_flags_overrideable">true</bool>
 </resources>
