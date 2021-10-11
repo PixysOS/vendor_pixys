@@ -96,6 +96,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Bootanimation
 $(call inherit-product, vendor/pixys/bootanimation/bootanimation.mk)
 
+# Fonts
+$(call inherit-product, vendor/pixys/config/fonts.mk)
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
