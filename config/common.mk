@@ -86,6 +86,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.wm.enable_remote_keyguard_animation=0
 
+# Game Overlay
+PRODUCT_COPY_FILES += \
+    vendor/pixys/prebuilt/common/etc/sysconfig/game_overlay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_overlay.xml
+
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
