@@ -62,6 +62,18 @@
             Device Personalization Services (AiAi)
         -->
 
+        <!-- Adaptive Sound (Pixel 2020) -->
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
+
+        <!-- Screen attention (Pixel 2019) -->
+        <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
+        <item>device_personalization_services/Attention__accel_sensor_threshold_mss=0.2</item>
+        <item>device_personalization_services/Attention__enabled=true</item>
+        <item>device_personalization_services/Attention__margin_horizontal_px=1000</item>
+        <item>device_personalization_services/Attention__margin_vertical_px=1000</item>
+        <item>device_personalization_services/Attention__proximity_sensor_enabled=false</item>
+
         <!-- Live Caption (Pixel 2017 + OEM) -->
         <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
         <item>device_personalization_services/Captions__enable_augmented_music=true</item>
@@ -80,45 +92,99 @@
         <item>device_personalization_services/Captions__visibility_playing_duration_millis=5000</item>
         <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
 
+        <!-- Notification Assistant -->
+        <item>device_personalization_services/NotificationAssistant__enable_service=true</item>
+        <item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
+        <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
+
         <!-- Now Playing (Pixel 2017) -->
         <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=191:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20211031-040022/manifest.json</item>
-
-        <!-- Adaptive Sound (Pixel 2020) -->
-        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
-        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
-
-        <!-- Screen attention (Pixel 2019) -->
-        <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
-        <item>device_personalization_services/Attention__accel_sensor_threshold_mss=0.2</item>
-        <item>device_personalization_services/Attention__enabled=false</item>
-        <item>device_personalization_services/Attention__margin_horizontal_px=1000</item>
-        <item>device_personalization_services/Attention__margin_vertical_px=1000</item>
-        <item>device_personalization_services/Attention__proximity_sensor_enabled=false</item>
-
-        <!-- Disable unused AiAi features -->
-        <item>device_personalization_services/Autofill__enable=false</item>
-        <item>device_personalization_services/Autofill__enable_fa=false</item>
-        <item>device_personalization_services/Fedex__enable_fedex=false</item>
-        <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
-        <item>device_personalization_services/NotificationAssistant__enable_service=false</item>
-        <item>device_personalization_services/VisualCortex__enable=false</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__cloud_api_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__enable_usage_fa=true</item>
+        <item>device_personalization_services/NowPlaying__on_demand_retry_fingerprinter_install=true</item>
+        <item>device_personalization_services/NowPlaying__youtube_export_enabled=true</item>
 
         <!-- Recents text selection (for Pixel Launcher users) -->
         <item>device_personalization_services/Overview__enable_image_selection=true</item>
         <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
-        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=false</item>
         <item>device_personalization_services/Overview__enable_overview=true</item>
         <item>device_personalization_services/Overview__enable_pir_clearcut_logging=true</item>
         <item>device_personalization_services/Overview__enable_pir_westworld_logging=true</item>
         <item>device_personalization_services/Overview__enable_proactive_hints=false</item>
         <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
-        <item>device_personalization_services/Overview__min_lens_agsa_app_version=301084649</item>
+
+        <!-- Smart Dictation -->
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+        <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__tng_transcription_soda_ttl_sec=10</item>
+
+        <!-- Smart Select -->
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_cache_on_suggest_selection=false</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_collection=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_store_connector=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_locked_bootloader_check=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_training_manager_populations=true</item>
+        <item>device_personalization_services/SmartSelect__smart_select_brella_population_name=aiai/smartselect/prod</item>
+        <item>device_personalization_services/SmartSelect__smart_select_brella_population_name_prefix=aiai/smartselect/prod/train</item>
+        <item>device_personalization_services/SmartSelect__smart_select_brella_session_name=aiai_smartselect_fa</item>
+        <item>device_personalization_services/SmartSelect__smart_select_example_ttl_ms=1209600000</item>
+
+       <!-- TextClassifier -->
+        <item>device_personalization_services/TextClassifierParams__enable_dynamic_kg_collections=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_instagram_action=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_location_scorer=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_superpacks_custom_bin_processing=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_superpacks_multi_bulks_request=true</item>
+        <item>device_personalization_services/TextClassifierParams__use_vocab_annotator=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg_logging=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tclib_download_using_superpacks=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_langid_superpacks_manifest_version=1</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__enable_tclib=true</item>
+
+       <!-- Live Translate -->
+        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
+
+        <!-- Disable unused AiAi features -->
+        <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
 
         <!-- Disable federated learning -->
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+
+        <!-- Misc -->
+        <item>device_personalization_services/ActionRanking__action_ranking_type=verb_preserving_action_invoke_frequency</item>
+        <item>device_personalization_services/ActionRanking__enable_example_store=true</item>
+        <item>device_personalization_services/ActionRanking__enable_example_store_v2=true</item>
+        <item>device_personalization_services/BrellaInAstrea__enable_brella_in_astrea=true</item>
+        <item>device_personalization_services/Brella__enable_westworld_logging_override=true</item>
+        <item>device_personalization_services/Brella__log_sampling_percentage=100</item>
+        <item>device_personalization_services/Pecan__enable_pecan=true</item>
+        <item>device_personalization_services/Pecan__enable_pecan_scroll=true</item>
+        <item>device_personalization_services/Personalization__enable_personalized_slice_info_mdh_sync_v2=true</item>
+        <item>device_personalization_services/Reflection__brella_enable_example_v3=false</item>
+        <item>device_personalization_services/Reflection__brella_population_name=aiai/reflection/prod</item>
+        <item>device_personalization_services/Reflection__enable_direct_share=true</item>
+        <item>device_personalization_services/Reflection__enable_share_activity=true</item>
+        <item>device_personalization_services/Reflection__example_logging_enabled=true</item>
+        <item>device_personalization_services/Reflection__training_brella_model_enabled=true</item>
+        
     </string-array>
 </resources>
