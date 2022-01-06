@@ -58,25 +58,11 @@
          non-interactive state. -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
-    <!-- Face detection for screen auto rotation -->
-    <string name="config_defaultRotationResolverService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiRotationResolverService</string>
-
-    <!-- Launcher app suggestions -->
-    <string name="config_defaultAppPredictionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
-
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
 
     <!-- Whether or not to add a "people" notifications section -->
     <bool name="config_usePeopleFiltering">true</bool>
-
-    <!-- Exempt AiAi from privacy indicators -->
-    <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
-    <string name="config_systemAudioIntelligence">com.google.android.as</string>
-    <string name="config_systemNotificationIntelligence">com.google.android.as</string>
-    <string name="config_systemTextIntelligence">com.google.android.as</string>
-    <string name="config_systemUiIntelligence">com.google.android.as</string>
-    <string name="config_systemVisualIntelligence">com.google.android.as</string>
 
     <!-- Whether this device is supporting the microphone toggle -->
     <bool name="config_supportsMicToggle">true</bool>
