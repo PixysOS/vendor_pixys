@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
-    SettingsIntelligenceGoogle
+    SettingsIntelligenceGoogle \
+    RepainterServicePriv
 
 ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
