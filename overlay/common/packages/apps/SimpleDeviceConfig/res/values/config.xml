@@ -185,6 +185,19 @@
         <item>device_personalization_services/Reflection__enable_share_activity=true</item>
         <item>device_personalization_services/Reflection__example_logging_enabled=true</item>
         <item>device_personalization_services/Reflection__training_brella_model_enabled=true</item>
+
+        <item>device_personalization_services/Echo__enable_priority_suggestion=true</item>
+        <item>device_personalization_services/Echo__enable_refraction=true</item>
+        <item>device_personalization_services/Echo__enable_sharesheet_ranking=true</item>
+        <item>device_personalization_services/Echo__refraction_last_app_override=true</item>
+        <item>device_personalization_services/Echo__refraction_max_prediction_spots=5</item>
+        <item>device_personalization_services/Echo__sharesheet_enable_base_score_adjustment=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
         
     </string-array>
 </resources>
