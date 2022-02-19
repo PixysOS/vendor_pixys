@@ -95,13 +95,9 @@
         <!-- Notification Assistant -->
         <item>device_personalization_services/NotificationAssistant__enable_service=true</item>
         <item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
-        <item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
-        <item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
-        <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
         <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
 
         <!-- Now Playing (Pixel 2017) -->
-        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=191:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20211031-040022/manifest.json</item>
         <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
         <item>device_personalization_services/NowPlaying__cloud_api_allowed=true</item>
         <item>device_personalization_services/NowPlaying__enable_usage_fa=true</item>
@@ -164,10 +160,11 @@
         <!-- Disable unused AiAi features -->
         <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
 
-        <!-- Disable federated learning -->
-        <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
-        <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
-        <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+        <!-- federated learning -->
+        <item>device_personalization_services/FederatedAssistant__enable_correction_learning=true</item>
+        <item>device_personalization_services/FederatedAssistant__enable_ekho=true</item>
+        <item>device_personalization_services/FederatedAssistant__enable_input_context_snapshot_capture=true</item>
+        <item>device_personalization_services/Fedex__enable_fedex=true</item>
 
         <!-- Misc -->
         <item>device_personalization_services/ActionRanking__action_ranking_type=verb_preserving_action_invoke_frequency</item>
@@ -185,6 +182,19 @@
         <item>device_personalization_services/Reflection__enable_share_activity=true</item>
         <item>device_personalization_services/Reflection__example_logging_enabled=true</item>
         <item>device_personalization_services/Reflection__training_brella_model_enabled=true</item>
+        <item>device_personalization_services/SimpleStorage__enable_simple_storage=true</item>
+        <item>device_personalization_services/Echo__enable_priority_suggestion=true</item>
+        <item>device_personalization_services/Echo__enable_refraction=true</item>
+        <item>device_personalization_services/Echo__enable_sharesheet_ranking=true</item>
+        <item>device_personalization_services/Echo__refraction_last_app_override=true</item>
+        <item>device_personalization_services/Echo__refraction_max_prediction_spots=5</item>
+        <item>device_personalization_services/Echo__sharesheet_enable_base_score_adjustment=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
         
     </string-array>
 </resources>
