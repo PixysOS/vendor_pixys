@@ -1,7 +1,8 @@
 # PixysOS packages
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
+    AvoidAppsInCutoutOverlay \
+    SettingsIntelligenceGoogle
 
 ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
