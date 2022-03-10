@@ -13,6 +13,7 @@
 # limitations under the License.
 
 PIXYS_MOD_VERSION = v5.1.3
+PIXYS_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 ifndef PIXYS_BUILD_TYPE
 PIXYS_BUILD_TYPE := UNOFFICIAL
@@ -56,4 +57,5 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.pixys.build.date=$(PIXYS_BUILD_DATETIME)\
   ro.pixys.display.version=$(PIXYS_DISPLAY_VERSION) \
   ro.pixys.fingerprint=$(PIXYS_FINGERPRINT)\
-  ro.pixys.edition=$(PIXYS_EDITION)
+  ro.pixys.edition=$(PIXYS_EDITION)\
+  ro.pixys.settings.android_version=$(PIXYS_PLATFORM_RELEASE_OR_CODENAME)
