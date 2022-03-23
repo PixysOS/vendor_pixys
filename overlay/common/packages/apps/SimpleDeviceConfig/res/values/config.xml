@@ -20,9 +20,6 @@
             System
         -->
 
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
-
         <!-- Machine learning back gesture (requires TensorFlow model) -->
         <item>systemui/use_back_gesture_ml_model=true</item>
         <item>systemui/back_gesture_ml_model_name=backgesture</item>
@@ -196,5 +193,10 @@
         <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
         
+    </string-array>
+
+    <string-array name="configs_base_soft">
+        <!-- Use new privacy indicators for location -->
+        <item>privacy/location_indicators_enabled=true</item>
     </string-array>
 </resources>
