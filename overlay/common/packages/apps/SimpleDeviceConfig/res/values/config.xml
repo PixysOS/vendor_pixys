@@ -36,8 +36,8 @@
         <!-- Globally enable the new photo picker -->
         <item>storage_native_boot/take_over_get_content=true</item>
 
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
+	<!-- Allow users to disable location indicators in Developer Options -->
+        <item>privacy/location_indicator_settings_enabled=true</item>
 
         <!-- Enable permission hub v2 -->
         <item>privacy/permissions_hub_enabled=true</item>
@@ -245,5 +245,10 @@
         <!-- Globally enable the new photo picker -->
         <item>storage_native_boot/take_over_get_content=true</item>
 
+    </string-array>
+
+    <string-array name="configs_base_soft">
+        <!-- Use new privacy indicators for location -->
+        <item>privacy/location_indicators_enabled=true</item>
     </string-array>
 </resources>
