@@ -1,9 +1,14 @@
 # PixysOS packages
 PRODUCT_PACKAGES += \
     Updater \
-    ThemePicker \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
+
+ifneq ($(BUILD_WITH_GAPPS),true)
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    Launcher3QuickStep
+endif
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
