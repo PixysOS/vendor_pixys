@@ -717,7 +717,7 @@ function pixysrebase() {
 }
 
 function mka() {
-    m
+    m "$@"
 }
 
 function cmka() {
