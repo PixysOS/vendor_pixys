@@ -1,6 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
-include vendor/pixys/build/core/pixys_version.mk
+$(call inherit-product, vendor/pixys/build/core/pixys_version.mk)
 
 PRODUCT_BRAND ?= PixysOS
 
@@ -85,11 +85,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Include Pixys audio files
-include vendor/pixys/config/pixys_audio.mk
+# Inherit Pixys audio files
+$(call inherit-product, vendor/pixys/config/pixys_audio.mk)
 
-# Include Pixys extra packages
-include vendor/pixys/config/pixys_packages.mk
+# Inherit Pixys extra packages
+$(call inherit-product, vendor/pixys/config/pixys_packages.mk)
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
