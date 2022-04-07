@@ -136,6 +136,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
     setupwizard.theme=glif_v3_light
 
+# PixelCamera services
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
+    ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
+
+
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem

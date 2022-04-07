@@ -4,6 +4,11 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle
 
+ifneq ($(BUILD_WITH_PIXELCAM),true)
+PRODUCT_PACKAGES += \
+    PixelCameraServices
+endif
+
 ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     ThemePicker \
