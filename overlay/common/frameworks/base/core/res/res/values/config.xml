@@ -71,6 +71,10 @@
     <!-- Whether this device is supporting the camera toggle -->
     <bool name="config_supportsCamToggle">true</bool>
 
+    <!-- Package name that will receive an explicit manifest broadcast for
+         android.os.action.POWER_SAVE_MODE_CHANGED. -->
+    <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
+
     <!-- Name of a font family to use for body text. -->
     <string name="config_bodyFontFamily">google-sans-text</string>
     <string name="config_bodyFontFamilyMedium">google-sans-text-medium</string>
