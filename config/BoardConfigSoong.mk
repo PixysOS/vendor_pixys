@@ -30,7 +30,6 @@ SOONG_CONFIG_NAMESPACES += pixysGlobalVars
 SOONG_CONFIG_pixysGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
-    camera_needs_client_info \
     disable_postrender_cleanup \
     has_legacy_camera_hal1 \
     has_memfd_backport \
@@ -100,7 +99,6 @@ SOONG_CONFIG_pixysGlobalVars_target_process_sdk_version_override := $(TARGET_PRO
 SOONG_CONFIG_pixysGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 SOONG_CONFIG_pixysGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_pixysGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
-SOONG_CONFIG_pixysGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_pixysQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
