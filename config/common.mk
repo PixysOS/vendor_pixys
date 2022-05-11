@@ -132,6 +132,13 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 # Don't preopt prebuilts
 DONT_DEXPREOPT_PREBUILTS := true
 
+# SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 # Use 64-bit dex2oat for better dexopt time.
 PRODUCT_PROPERTY_OVERRIDES += \
