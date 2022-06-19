@@ -16,6 +16,16 @@
 */
 -->
 <resources>
-    <!-- dimensions for the navigation bar handle -->
-    <dimen name="navigation_home_handle_width">110dp</dimen>
+   <!-- dimensions for the navigation bar handle -->
+    <dimen name="navigation_handle_radius">2dp</dimen>
+    <dimen name="navigation_handle_bottom">8dp</dimen>
+    <dimen name="navigation_home_handle_width">108dp</dimen>
+
+    <!-- Padding at the end of the navigation panel to allow the arrow not to be clipped off -->
+    <dimen name="navigation_edge_panel_height">268dp</dimen>
+
+    <!-- Size of the nav bar edge panels, should be greater to the
+         edge sensitivity + the drag threshold -->
+    <dimen name="navigation_edge_panel_width">105dp</dimen>
+
 </resources>
