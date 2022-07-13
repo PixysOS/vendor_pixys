@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     FontManropeOverlay \
     FontNotoSerifSource \
     FontOnePlusSansOverlay \
-    FontOneplusSlateSourceOverlay
+    FontOneplusSlateSourceOverlay \
+    FontNothingOverlay
 
 PRODUCT_PACKAGES += \
     GInterVF-Italic.ttf \
