@@ -433,4 +433,25 @@
     <alias name="op-sans-medium" to="op-sans" weight="500" />
     <alias name="op-sans-bold" to="op-sans" weight="700" />
     <alias name="op-sans-black" to="op-sans" weight="900" />
+
+    <family customizationType="new-named-family" name="NDot55">
+        <font weight="400" style="normal">NDot55Caps.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="NDot57">
+        <font weight="400" style="normal">NDot57Caps.ttf</font>
+    </family>
+    <alias name="ndot" to="NDot55" />
+    <alias name="ndot57" to="NDot57" />
+
+    <family customizationType="new-named-family" name="Lettera">
+        <font weight="400" style="normal">LetteraMonoLL-Regular.ttf</font>
+        <font weight="400" style="italic">LetteraMonoLL-Italic.ttf</font>
+        <font weight="300" style="normal">LetteraMonoLL-Light.ttf</font>
+        <font weight="300" style="italic">LetteraMonoLL-LightItalic.ttf</font>
+        <font weight="500" style="normal">LetteraMonoLL-Medium.ttf</font>
+        <font weight="500" style="italic">LetteraMonoLL-MediumItalic.ttf</font>
+    </family>
+    <alias name="Lettera-light" to="Lettera" weight="300" />
+    <alias name="Lettera-medium" to="Lettera" weight="500" />
+
 </fonts-modification>
