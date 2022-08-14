@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PIXYS_MOD_VERSION = v5.1.4
+PIXYS_MOD_VERSION = v5.1.5
 PIXYS_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 # Custom security patch
