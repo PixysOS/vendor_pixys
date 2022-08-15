@@ -92,7 +92,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Game Overlay
 PRODUCT_COPY_FILES += \
-    vendor/pixys/prebuilt/common/etc/sysconfig/game_overlay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_overlay.xml
+    vendor/pixys/prebuilt/common/etc/sysconfig/game_service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_service.xml
 
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
