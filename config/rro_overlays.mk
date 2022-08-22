@@ -1,4 +1,5 @@
 # RRO Overlays
 PRODUCT_PACKAGES += \
     CustomPixelLauncherOverlay \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    ImmersiveNavigationOverlay
