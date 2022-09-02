@@ -7,7 +7,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     TouchGestures
 
-ifneq ($(BUILD_WITH_GAPPS),true)
+ifeq ($(BUILD_WITH_MINIMAL_GAPPS),true)
 PRODUCT_PACKAGES += \
     PixysThemesStub \
     ThemePicker \
