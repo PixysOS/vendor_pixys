@@ -16,18 +16,11 @@
 -->
 <resources>
     <string-array name="configs_base">
-        <!--
-            System
-        -->
-
  
         <!-- Machine learning back gesture (requires TensorFlow model) -->
-     <!--        <item>systemui/use_back_gesture_ml_model=true</item>
+    <!--<item>systemui/use_back_gesture_ml_model=true</item>
         <item>systemui/back_gesture_ml_model_name=backgesture</item>
         <item>systemui/back_gesture_ml_model_threshold=0.8</item>   -->
-
-        <!-- Contribute app shortcuts to centralized AppSearch index -->
-        <item>systemui/shortcut_appsearch_integration=true</item>
 
 
         <!-- Don't pin camera app to save memory -->
@@ -35,29 +28,17 @@
 
         <!-- Keep up to 7 days of permission usage history -->
         <item>privacy/discrete_history_cutoff_millis=604800000</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
 
         <!-- Enable safety center -->
         <item>privacy/safety_center_is_enabled=true</item>
 
-        <!--
-            Keep track of more app ops for privacy dashboard display.
-            From AppOpsManager.RUNTIME_AND_APPOP_PERMISSIONS_OPS:
-            Location: COARSE_LOCATION, FINE_LOCATION
-            Camera: CAMERA
-            Microphone: RECORD_AUDIO
-            Calendar: READ_CALENDAR, WRITE_CALENDAR
-            Call logs: READ_CALL_LOG, WRITE_CALL_LOG
-            Contacts: READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS
-            Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, ACCESS_MEDIA_LOCATION
-            Nearby devices: BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE, UWB_RANGING
-            Phone: READ_PHONE_STATE, READ_PHONE_NUMBERS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG, ADD_VOICEMAIL, USE_SIP, PROCESS_OUTGOING_CALLS, ANSWER_PHONE_CALLS, ACCEPT_HANDOVER
-            Body sensors: ACTIVITY_RECOGNITION
-            SMS: SEND_SMS, RECEIVE_SMS, READ_SMS, RECEIVE_WAP_PUSH, RECEIVE_MMS, READ_CELL_BROADCASTS
-            From PrivacyItemController:
-            Camera: PHONE_CALL_CAMERA
-            Microphone: PHONE_CALL_MICROPHONE
-        -->
-        <item>privacy/discrete_history_ops_cslist=0,109,1,108,26,101,27,102,106,100,8,9,6,7,4,5,62,59,60,90,77,111,114,112,51,65,13,6,7,52,53,54,69,74,79,113,20,16,14,19,18,57</item>
+        <!-- Use new privacy indicators for location -->
+        <item>privacy/location_indicators_enabled=true</item>
+
+        <!-- Enable permission hub v2 -->
+        <item>privacy/permissions_hub_enabled=true</item>
+        <item>privacy/permissions_hub_2_enabled=true</item>
 
         <!--
             Device Personalization Services (AiAi)
@@ -65,164 +46,108 @@
 
         <!-- Adaptive Sound (Pixel 2020) -->
         <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
-        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
-
-        <!-- Screen attention (Pixel 2019) -->
-        <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
-        <item>device_personalization_services/Attention__accel_sensor_threshold_mss=0.2</item>
-        <item>device_personalization_services/Attention__enabled=true</item>
-        <item>device_personalization_services/Attention__margin_horizontal_px=1000</item>
-        <item>device_personalization_services/Attention__margin_vertical_px=1000</item>
-        <item>device_personalization_services/Attention__proximity_sensor_enabled=false</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
 
         <!-- Live Caption (Pixel 2017 + OEM) -->
         <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
-        <item>device_personalization_services/Captions__enable_augmented_music=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=false</item>
         <item>device_personalization_services/Captions__enable_clearcut_logging=true</item>
+        <item>device_personalization_services/Captions__enable_language_detection=true</item>
         <item>device_personalization_services/Captions__enable_punctuations=true</item>
-        <item>device_personalization_services/Captions__enable_setting_page=false</item>
-        <item>device_personalization_services/Captions__enable_text_transform=true</item>
-        <item>device_personalization_services/Captions__enable_westworld_logging=false</item>
-        <item>device_personalization_services/Captions__enable_zero_day=false</item>
-        <item>device_personalization_services/Captions__manifest_url_template=https://storage.googleapis.com/captions/%{NAMESPACE}_%{VERSION}_manifest.json</item>
-        <item>device_personalization_services/Captions__model_version_v1=20190613</item>
-        <item>device_personalization_services/Captions__model_version_v1_2=20200112</item>
-        <item>device_personalization_services/Captions__new_model_version_advanced=20210930</item>
-        <item>device_personalization_services/Captions__speech_threshold=0.2</item>
-        <item>device_personalization_services/Captions__surface_sound_events=true</item>
-        <item>device_personalization_services/Captions__visibility_playing_duration_millis=5000</item>
-        <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
 
-        <!-- Notification Assistant -->
+        <!-- Pixel Launcher Search -->
+        <item>device_personalization_services/Echo__search_enable_app_fetcher_v2=true</item>
+        <item>device_personalization_services/Echo__search_enable_app_search_tips=true</item>
+        <item>device_personalization_services/Echo__search_enable_app_token_indexing=false</item>
+        <item>device_personalization_services/Echo__search_enable_app_usage_stats_ranking=true</item>
+        <item>device_personalization_services/Echo__search_enable_application_header_type=true</item>
+        <item>device_personalization_services/Echo__search_enable_apps=true</item>
+        <item>device_personalization_services/Echo__search_enable_appsearch_tips_ranking_improvement=true</item>
+        <item>device_personalization_services/Echo__search_enable_assistant_quick_phrases_settings=true</item>
+        <item>device_personalization_services/Echo__search_enable_mdp_play_results=true</item>
+        <item>device_personalization_services/Echo__search_enable_search_in_app_icon=true</item>
+        <item>device_personalization_services/Echo__search_enable_static_shortcuts=true</item>
+        <item>device_personalization_services/Echo__search_enable_superpacks_app_terms=true</item>
+        <item>device_personalization_services/Echo__search_enable_superpacks_play_results=true</item>
+        <item>device_personalization_services/Echo__search_play_enable_spell_correction=true</item>
+        <item>device_personalization_services/Echo__settings_search_debug=true</item>
+
+        <!-- Smartspace -->
+        <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=2</item>
+        <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_cross_device_timer=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dark_launch_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_unified_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_doordash=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nap=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nudge=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_package_delivery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_connections=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_ridesharing_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=WEIGHTED</item>
+        <item>device_personalization_services/Echo__smartspace_enable_sensitive_notification_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_step_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
+        <item>device_personalization_services/Echo__smartspace_gaia_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dwb_bedtime_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_is_debug=true</item>
+
+        <!-- Notification Assistant (DPS) -->
         <item>device_personalization_services/NotificationAssistant__enable_service=true</item>
         <item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
         <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
 
-        <!-- Now Playing (Pixel 2017) -->
-        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
-        <item>device_personalization_services/NowPlaying__cloud_api_allowed=true</item>
-        <item>device_personalization_services/NowPlaying__enable_usage_fa=true</item>
-        <item>device_personalization_services/NowPlaying__on_demand_retry_fingerprinter_install=true</item>
-        <item>device_personalization_services/NowPlaying__youtube_export_enabled=true</item>
-
-        <!-- Recents text selection (for Pixel Launcher users) -->
-        <item>device_personalization_services/Overview__enable_image_selection=true</item>
-        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
-        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
-        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
-        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=false</item>
-        <item>device_personalization_services/Overview__enable_overview=true</item>
-        <item>device_personalization_services/Overview__enable_pir_clearcut_logging=true</item>
-        <item>device_personalization_services/Overview__enable_pir_westworld_logging=true</item>
-        <item>device_personalization_services/Overview__enable_proactive_hints=false</item>
-        <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
-
-        <!-- Smart Dictation -->
-        <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
-        <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_corrections=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
-        <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
-        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
-        <item>device_personalization_services/SpeechRecognitionService__tng_transcription_soda_ttl_sec=10</item>
-
-        <!-- Smart Select -->
-        <item>device_personalization_services/SmartSelect__enable_smart_select_example_cache_on_suggest_selection=false</item>
-        <item>device_personalization_services/SmartSelect__enable_smart_select_example_collection=true</item>
-        <item>device_personalization_services/SmartSelect__enable_smart_select_example_store_connector=true</item>
-        <item>device_personalization_services/SmartSelect__enable_smart_select_locked_bootloader_check=true</item>
-        <item>device_personalization_services/SmartSelect__enable_smart_select_training_manager_populations=true</item>
-        <item>device_personalization_services/SmartSelect__smart_select_brella_population_name=aiai/smartselect/prod</item>
-        <item>device_personalization_services/SmartSelect__smart_select_brella_population_name_prefix=aiai/smartselect/prod/train</item>
-        <item>device_personalization_services/SmartSelect__smart_select_brella_session_name=aiai_smartselect_fa</item>
-        <item>device_personalization_services/SmartSelect__smart_select_example_ttl_ms=1209600000</item>
-
-       <!-- TextClassifier -->
-        <item>device_personalization_services/TextClassifierParams__enable_dynamic_kg_collections=true</item>
-        <item>device_personalization_services/TextClassifierParams__enable_instagram_action=true</item>
-        <item>device_personalization_services/TextClassifierParams__enable_location_scorer=true</item>
-        <item>device_personalization_services/TextClassifierParams__enable_superpacks_custom_bin_processing=true</item>
-        <item>device_personalization_services/TextClassifierParams__enable_superpacks_multi_bulks_request=true</item>
-        <item>device_personalization_services/TextClassifierParams__use_vocab_annotator=true</item>
-        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg=true</item>
-        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg_logging=true</item>
-        <item>device_personalization_services/TextClassifierTcLib__enable_tclib_download_using_superpacks=true</item>
-        <item>device_personalization_services/TextClassifierTcLib__tclib_langid_superpacks_manifest_version=1</item>
-        <item>device_personalization_services/TextClassifierWebrefDeploy__enable_tclib=true</item>
-
-       <!-- Live Translate -->
+        <!-- Google Live Translate -->
         <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
         <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
         <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
         <item>device_personalization_services/Translate__translation_service_enabled=true</item>
+        <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
 
-        <!-- Disable unused AiAi features -->
-        <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
+        <!-- Gboard -->
+        <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
 
-        <!-- federated learning -->
-        <item>device_personalization_services/FederatedAssistant__enable_correction_learning=true</item>
-        <item>device_personalization_services/FederatedAssistant__enable_ekho=true</item>
-        <item>device_personalization_services/FederatedAssistant__enable_input_context_snapshot_capture=true</item>
-        <item>device_personalization_services/Fedex__enable_fedex=true</item>
+        <!-- Pixel Launcher -->
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
 
-        <!-- Misc -->
-        <item>device_personalization_services/ActionRanking__action_ranking_type=verb_preserving_action_invoke_frequency</item>
-        <item>device_personalization_services/ActionRanking__enable_example_store=true</item>
-        <item>device_personalization_services/ActionRanking__enable_example_store_v2=true</item>
-        <item>device_personalization_services/BrellaInAstrea__enable_brella_in_astrea=true</item>
-        <item>device_personalization_services/Brella__enable_westworld_logging_override=true</item>
-        <item>device_personalization_services/Brella__log_sampling_percentage=100</item>
-        <item>device_personalization_services/Pecan__enable_pecan=true</item>
-        <item>device_personalization_services/Pecan__enable_pecan_scroll=true</item>
-        <item>device_personalization_services/Personalization__enable_personalized_slice_info_mdh_sync_v2=true</item>
-        <item>device_personalization_services/Reflection__brella_enable_example_v3=false</item>
-        <item>device_personalization_services/Reflection__brella_population_name=aiai/reflection/prod</item>
-        <item>device_personalization_services/Reflection__enable_direct_share=true</item>
-        <item>device_personalization_services/Reflection__enable_share_activity=true</item>
-        <item>device_personalization_services/Reflection__example_logging_enabled=true</item>
-        <item>device_personalization_services/Reflection__training_brella_model_enabled=true</item>
-        <item>device_personalization_services/SimpleStorage__enable_simple_storage=true</item>
-        <item>device_personalization_services/Echo__enable_priority_suggestion=true</item>
-        <item>device_personalization_services/Echo__enable_refraction=true</item>
-        <item>device_personalization_services/Echo__enable_sharesheet_ranking=true</item>
-        <item>device_personalization_services/Echo__refraction_last_app_override=true</item>
-        <item>device_personalization_services/Echo__refraction_max_prediction_spots=5</item>
-        <item>device_personalization_services/Echo__sharesheet_enable_base_score_adjustment=false</item>
-        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
-        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
-        
-    </string-array>
+        <!-- System Ui -->
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
 
-    <string-array name="configs_base_soft">
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
+        <!-- Notifications -->
+        <item>notification_assistant/generate_actions=true</item>
+        <item>notification_assistant/generate_replies=true</item>
 
-        <!--
-            Keep track of more app ops for privacy dashboard display.
-
-            From AppOpsManager.RUNTIME_AND_APPOP_PERMISSIONS_OPS:
-            Location: COARSE_LOCATION, FINE_LOCATION
-            Camera: CAMERA
-            Microphone: RECORD_AUDIO
-            Calendar: READ_CALENDAR, WRITE_CALENDAR
-            Call logs: READ_CALL_LOG, WRITE_CALL_LOG
-            Contacts: READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS
-            Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, ACCESS_MEDIA_LOCATION
-            Nearby devices: BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE, UWB_RANGING
-            Phone: READ_PHONE_STATE, READ_PHONE_NUMBERS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG, ADD_VOICEMAIL, USE_SIP, PROCESS_OUTGOING_CALLS, ANSWER_PHONE_CALLS, ACCEPT_HANDOVER
-            Body sensors: ACTIVITY_RECOGNITION
-            SMS: SEND_SMS, RECEIVE_SMS, READ_SMS, RECEIVE_WAP_PUSH, RECEIVE_MMS, READ_CELL_BROADCASTS
-
-            From PrivacyItemController:
-            Camera: PHONE_CALL_CAMERA
-            Microphone: PHONE_CALL_MICROPHONE
-        -->
-        <item>privacy/discrete_history_ops_cslist=0,109,1,108,26,101,27,102,106,100,8,9,6,7,4,5,62,59,60,90,77,111,114,112,51,65,13,6,7,52,53,54,69,74,79,113,20,16,14,19,18,57</item>
     </string-array>
 </resources>
