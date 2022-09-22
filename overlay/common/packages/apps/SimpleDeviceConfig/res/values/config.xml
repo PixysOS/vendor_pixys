@@ -36,6 +36,9 @@
         <!-- Keep up to 7 days of permission usage history -->
         <item>privacy/discrete_history_cutoff_millis=604800000</item>
 
+        <!-- Enable safety center -->
+        <item>privacy/safety_center_is_enabled=true</item>
+
         <!--
             Keep track of more app ops for privacy dashboard display.
             From AppOpsManager.RUNTIME_AND_APPOP_PERMISSIONS_OPS:
