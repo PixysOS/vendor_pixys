@@ -1,5 +1,6 @@
 # PixysOS packages
 PRODUCT_PACKAGES += \
+    Aperture \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
