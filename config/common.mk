@@ -103,6 +103,9 @@ SYSTEMUI_OPTIMIZE_JAVA ?= true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Dedupe VNDK libraries with identical core variants
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # Bootanimation
 $(call inherit-product, vendor/pixys/bootanimation/bootanimation.mk)
 
