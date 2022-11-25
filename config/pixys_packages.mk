@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGoogle \
     RepainterServicePriv \
     GameSpace \
-    TouchGestures
+    TouchGestures \
+    BtHelper
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
