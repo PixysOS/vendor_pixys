@@ -147,7 +147,7 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUIGoogle \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
