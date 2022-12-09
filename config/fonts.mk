@@ -2,6 +2,10 @@
 PRODUCT_PACKAGES += \
     ArbutusSlab-Regular.ttf
 
+# google-sans family
+PRODUCT_PACKAGES += \
+    GoogleSansClock-Regular.ttf
+
 # Lustria family
 PRODUCT_PACKAGES += \
     Lustria-Regular.ttf
