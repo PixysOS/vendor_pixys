@@ -50,8 +50,6 @@
 #
 #   KERNEL_CC                          = The C Compiler used. This is automatically set based
 #                                          on whether the clang version is set, optional.
-#   KERNEL_LD                          = The Linker used. This is automatically set based
-#                                          on whether the clang/gcc version is set, optional.
 #
 #   KERNEL_CLANG_TRIPLE                = Target triple for clang (e.g. aarch64-linux-gnu-)
 #                                          defaults to arm-linux-gnu- for arm
@@ -164,9 +162,6 @@ else
         $(error "NO KERNEL CONFIG")
     else
         ifneq ($(TARGET_FORCE_PREBUILT_KERNEL),)
-            ifneq ($(filter OFFICIAL,$(PIXYS_BUILDTYPE)),)
-                $(error "PREBUILT KERNEL IS NOT ALLOWED ON OFFICIAL BUILDS!")
-            else
                 $(warning **********************************************************)
                 $(warning * Kernel source found and configuration was defined,     *)
                 $(warning * but prebuilt kernel is being forced.                   *)
@@ -179,7 +174,6 @@ else
                 $(warning **********************************************************)
                 FULL_KERNEL_BUILD := false
                 KERNEL_BIN := $(TARGET_PREBUILT_KERNEL)
-            endif
         else
             FULL_KERNEL_BUILD := true
             KERNEL_BIN := $(TARGET_PREBUILT_INT_KERNEL)
@@ -247,9 +241,6 @@ ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     ifeq ($(KERNEL_CC),)
         KERNEL_CC := CC="$(CCACHE_BIN) clang"
     endif
-    ifeq ($(KERNEL_LD),)
-        KERNEL_LD :=
-    endif
 endif
 
 ifneq ($(TARGET_KERNEL_MODULES),)
@@ -273,7 +264,15 @@ endif
 # $(1): output path (The value passed to O=)
 # $(2): target to build (eg. defconfig, modules, dtbo.img)
 define internal-make-kernel-target
-$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(KERNEL_LD) $(2)
+$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(2)
+endef
+
+# Make an external module target
+# $(1): module name
+# $(2): module root path
+# $(3): target to build (eg. modules_install)
+define make-external-module-target
+$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_EXT_MODULE_ROOT)/$(1) M=$(2)/$(1) KERNEL_SRC=$(BUILD_TOP)/$(KERNEL_SRC) OUT_DIR=$(KERNEL_BUILD_OUT_PREFIX)$(KERNEL_OUT) O=$(KERNEL_BUILD_OUT_PREFIX)$(KERNEL_OUT) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(3)
 endef
 
 # Generate kernel .config from a given defconfig
@@ -311,8 +310,6 @@ define make-kernel-config
 			echo $(KERNEL_CONFIG_OVERRIDE) >> $(1)/.config; \
 			$(call make-kernel-target,oldconfig); \
 		fi
-	# Create defconfig build artifact
-	$(call internal-make-kernel-target,$(1),savedefconfig)
 endef
 
 # Make a kernel target
@@ -421,6 +418,14 @@ $(TARGET_PREBUILT_INT_KERNEL): $(KERNEL_CONFIG) $(DEPMOD) $(DTC) $(PAHOLE)
 			$(call make-kernel-target,modules) || exit "$$?"; \
 			echo "Installing Kernel Modules"; \
 			$(call make-kernel-target,INSTALL_MOD_PATH=$(MODULES_INTERMEDIATES) INSTALL_MOD_STRIP=1 modules_install); \
+			$(if $(TARGET_KERNEL_EXT_MODULES),\
+				echo "Building and Installing External Kernel Modules"; \
+				rpath=$$(python3 -c 'import os,sys;print(os.path.relpath(*(sys.argv[1:])))' $(TARGET_KERNEL_EXT_MODULE_ROOT) $(KERNEL_SRC)); \
+				$(foreach p, $(TARGET_KERNEL_EXT_MODULES),\
+					$$pwd; \
+					$(call make-external-module-target,$(p),$$rpath,); \
+					$(call make-external-module-target,$(p),$$rpath,INSTALL_MOD_PATH=$(MODULES_INTERMEDIATES) INSTALL_MOD_STRIP=1 KERNEL_UAPI_HEADERS_DIR=$(KERNEL_OUT) modules_install)); \
+			) \
 			kernel_release=$$(cat $(KERNEL_RELEASE)) \
 			kernel_modules_dir=$(MODULES_INTERMEDIATES)/lib/modules/$$kernel_release \
 			$(foreach s, $(TARGET_MODULE_ALIASES),\
@@ -446,6 +451,7 @@ kerneltags: $(KERNEL_CONFIG)
 
 kernelsavedefconfig: $(KERNEL_OUT)
 	$(call make-kernel-config,$(KERNEL_OUT),$(BASE_KERNEL_DEFCONFIG))
+	$(call make-kernel-target,savedefconfig)
 	cp $(KERNEL_OUT)/defconfig $(BASE_KERNEL_DEFCONFIG_SRC)
 
 alldefconfig: $(KERNEL_OUT)
@@ -458,33 +464,47 @@ include $(BOARD_CUSTOM_DTBOIMG_MK)
 else
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
-$(BOARD_PREBUILT_DTBOIMAGE): $(DTC) $(MKDTIMG) $(MKDTBOIMG)
-ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+
+$(DTBO_OUT):
+	mkdir -p $(DTBO_OUT)
+
+$(BOARD_PREBUILT_DTBOIMAGE): $(DTC) $(MKDTIMG) $(MKDTBOIMG) $(DTBO_OUT)
 $(BOARD_PREBUILT_DTBOIMAGE):
 	@echo "Building dtbo.img"
+	$(hide) find $(DTBO_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtbo" | xargs rm -f
 	$(call make-dtbo-target,$(KERNEL_DEFCONFIG))
-	$(call make-dtbo-target,dtbs)
+	$(call make-dtbo-target,$(TARGET_KERNEL_DTB))
+ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
 ifdef BOARD_DTBO_CFG
 	$(MKDTBOIMG) cfg_create $@ $(BOARD_DTBO_CFG) -d $(DTBO_OUT)/arch/$(KERNEL_ARCH)/boot/dts
 else
 	$(MKDTBOIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(shell find $(DTBO_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtbo" | sort)
-endif
+endif # BOARD_DTBO_CFG
 else
-$(BOARD_PREBUILT_DTBOIMAGE):
-	@echo "Building dtbo.img"
-	$(call make-dtbo-target,$(KERNEL_DEFCONFIG))
-	$(call make-dtbo-target,dtbo.img)
+	$(call make-dtbo-target,$(TARGET_KERNEL_DTBO))
 endif # BOARD_KERNEL_SEPARATED_DTBO
+	$(hide) touch -c $(DTBO_OUT)
 endif # BOARD_CUSTOM_DTBOIMG_MK
 endif # TARGET_NEEDS_DTBOIMAGE/BOARD_KERNEL_SEPARATED_DTBO
 
 ifeq ($(BOARD_INCLUDE_DTB_IN_BOOTIMG),true)
 ifeq ($(BOARD_PREBUILT_DTBIMAGE_DIR),)
-$(INSTALLED_DTBIMAGE_TARGET): $(DTC)
+$(DTB_OUT):
+	mkdir -p $(DTB_OUT)
+
+$(INSTALLED_DTBIMAGE_TARGET): $(DTC) $(DTB_OUT)
+ifeq ($(TARGET_WANTS_EMPTY_DTB),true)
+	@rm -f $@
+	echo "empty" > $@
+else
 	@echo "Building dtb.img"
+	$(hide) find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtb" | xargs rm -f
 	$(call make-dtb-target,$(KERNEL_DEFCONFIG))
-	$(call make-dtb-target,dtbs)
+	$(call make-dtb-target,$(TARGET_KERNEL_DTB))
 	cat $(shell find $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts -type f -name "*.dtb" | sort) > $@
+	$(hide) touch -c $(DTB_OUT)
+endif # !TARGET_WANTS_EMPTY_DTB
+
 endif # !BOARD_PREBUILT_DTBIMAGE_DIR
 endif # BOARD_INCLUDE_DTB_IN_BOOTIMG
 
@@ -509,21 +529,13 @@ endif
 ## Install it
 
 ifeq ($(NEEDS_KERNEL_COPY),true)
-file := $(INSTALLED_KERNEL_TARGET)
-ALL_PREBUILT += $(file)
-$(file) : $(KERNEL_BIN) | $(ACP)
+$(INSTALLED_KERNEL_TARGET): $(KERNEL_BIN)
 	$(transform-prebuilt-to-target)
-
-ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 endif
 
 ifeq ($(RECOVERY_KERNEL_COPY),true)
-file := $(INSTALLED_RECOVERY_KERNEL_TARGET)
-ALL_PREBUILT += $(file)
-$(file) : $(RECOVERY_BIN) | $(ACP)
+$(INSTALLED_RECOVERY_KERNEL_TARGET): $(RECOVERY_BIN)
 	$(transform-prebuilt-to-target)
-
-ALL_PREBUILT += $(INSTALLED_RECOVERY_KERNEL_TARGET)
 endif
 
 .PHONY: recovery-kernel
