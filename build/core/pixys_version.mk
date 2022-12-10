@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PIXYS_MOD_VERSION = v6.0.0
+PIXYS_MOD_VERSION = v6.1.0
 
 ifndef PIXYS_BUILD_TYPE
 PIXYS_BUILD_TYPE := UNOFFICIAL
