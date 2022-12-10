@@ -8,13 +8,6 @@ PRODUCT_PACKAGES += \
     GameSpace \
     TouchGestures
 
-ifeq ($(BUILD_WITH_MINIMAL_GAPPS),true)
-PRODUCT_PACKAGES += \
-    PixysThemesStub \
-    ThemePicker \
-    Launcher3QuickStep
-endif
-
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
     system/bin/getcap \
