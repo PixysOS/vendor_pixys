@@ -19,16 +19,16 @@ ifneq ($(BUILD_WITH_COLORS),0)
     include $(TOP_DIR)vendor/pixys/build/core/colors.mk
 endif
 
-PIXYS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION)-img.zip
-PIXYS_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
+PIXYS_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION)-img.zip
+PIXYS_TARGET_UPDATEPACKAGE_FOLDER := $(PRODUCT_OUT)
 PIXYS_BUILD_TIME :=
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 .PHONY: updatepackage
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(PIXYS_TARGET_PACKAGE)
-	$(hide) $(MD5) $(PIXYS_TARGET_PACKAGE) > $(PIXYS_TARGET_PACKAGE).md5sum
+	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(PIXYS_TARGET_UPDATEPACKAGE)
+	$(hide) $(MD5) $(PIXYS_TARGET_UPDATEPACKAGE) > $(PIXYS_TARGET_UPDATEPACKAGE).md5sum
 	@echo -e ${CL_BLU}"																																 "${CL_BLU}
 	@echo -e ${CL_BLU}"                                                                                                                              "${CL_BLU}
 	@echo -e ${CL_BLU}"                                                                                                                              "${CL_BLU}
@@ -56,11 +56,11 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	@echo -e ${CL_RED}"                                                                                                                              "${CL_RED}
 	@echo -e ${CL_RED}"                                      Your Fastboot Build Is Ready! Enjoy the PixysOS                                         "${CL_RED}
 	@echo -e ${CL_CYN}"==================================================-Package Details-==========================================================="${CL_RST}
-	@echo -e ${CL_CYN}"Folder Location: "${CL_MAG} $(PIXYS_TARGET_PACKAGE_FOLDER)${CL_RST}
+	@echo -e ${CL_CYN}"Folder Location: "${CL_MAG} $(PIXYS_TARGET_UPDATEPACKAGE_FOLDER)${CL_RST}
 	@echo -e ${CL_CYN}"ZipName        : "${CL_MAG} $(PIXYS_VERSION)-img.zip${CL_RST}
-	@echo -e ${CL_CYN}"MD5            : "${CL_MAG}" $(shell cat $(PIXYS_TARGET_PACKAGE).md5sum | awk '{print $$1}')"${CL_RST}
-	@echo -e ${CL_CYN}"Size           : "${CL_MAG}" $(shell du -hs $(PIXYS_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
-	@echo -e ${CL_CYN}"Size(in bytes) : "${CL_MAG}" $(shell wc -c $(PIXYS_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"MD5            : "${CL_MAG}" $(shell cat $(PIXYS_TARGET_UPDATEPACKAGE).md5sum | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"Size           : "${CL_MAG}" $(shell du -hs $(PIXYS_TARGET_UPDATEPACKAGE) | awk '{print $$1}')"${CL_RST}
+	@echo -e ${CL_CYN}"Size(in bytes) : "${CL_MAG}" $(shell wc -c $(PIXYS_TARGET_UPDATEPACKAGE) | awk '{print $$1}')"${CL_RST}
 	@echo -e ${CL_CYN}"DateTime       : "${CL_MAG} $(PIXYS_BUILD_DATETIME)${CL_RST}
 	@echo -e ${CL_CYN}"Build Type     : "${CL_MAG} $(PIXYS_BUILD_TYPE)${CL_RST}
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
