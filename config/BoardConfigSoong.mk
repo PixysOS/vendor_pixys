@@ -43,7 +43,8 @@ SOONG_CONFIG_pixysGlobalVars += \
     target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
     target_uses_prebuilt_dynamic_partitions \
-    uses_camera_parameter_lib
+    uses_camera_parameter_lib \
+    uses_oplus_camera
 
 SOONG_CONFIG_NAMESPACES += pixysNvidiaVars
 SOONG_CONFIG_pixysNvidiaVars += \
@@ -86,6 +87,7 @@ SOONG_CONFIG_pixysQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE
 SOONG_CONFIG_pixysQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_pixysQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_pixysGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
+SOONG_CONFIG_pixysGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
