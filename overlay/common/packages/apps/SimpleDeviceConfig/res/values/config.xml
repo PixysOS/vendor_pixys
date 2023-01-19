@@ -241,6 +241,18 @@
         <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
         <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
 
+        <!-- Pixel Launcher (Additional) -->
+        <item>launcher/ENABLE_LOCAL_COLOR_POPUPS=true</item>
+        <item>launcher/KEYGUARD_ANIMATION=true</item>
+        <item>launcher/ENABLE_REGION_SAMPLING=true</item>
+        <item>launcher/ENABLE_MINIMAL_DEVICE=true</item>
+        <item>launcher/ENABLE_LAUNCHER_ACTIVITY_THEME_CROSSFADE=true</item>
+        <item>launcher/ENABLE_DISMISS_PREDICTION_UNDO=true</item>
+        <item>launcher/ENABLE_KEYBOARD_TRANSITION_SYNC=true</item>
+        <item>launcher/ENABLE_WIDGET_PICKER_DEPTH=true</item>
+        <item>launcher/SHOW_DELIGHTFUL_PAGINATION_FOLDER=true</item>
+        <item>launcher/POPUP_MATERIAL_U=true</item>
+
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
         <item>systemui/enable_screenshot_corner_flow=true</item>
