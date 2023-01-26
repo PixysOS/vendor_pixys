@@ -139,6 +139,10 @@
         <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
 
+        <!-- sharesheet -->
+        <item>device_personalization_services/Sharesheet__enable_nearby_share_exp=true</item>
+       <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+
         <!-- Pixel Launcher -->
         <item>launcher/enable_one_search=true</item>
         <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
