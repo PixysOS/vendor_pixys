@@ -25,7 +25,7 @@ PIXYS_BUILD_TIME :=
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
-.PHONY: updatepackage
+.PHONY: updatepackage pixys-fastboot
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_UPDATE_PACKAGE_TARGET) $(PIXYS_TARGET_UPDATEPACKAGE)
 	$(hide) $(MD5) $(PIXYS_TARGET_UPDATEPACKAGE) > $(PIXYS_TARGET_UPDATEPACKAGE).md5sum
@@ -66,4 +66,4 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
 	@echo -e ""
 
-pixys: updatepackage
+pixys-fastboot: updatepackage
