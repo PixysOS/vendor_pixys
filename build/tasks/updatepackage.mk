@@ -21,7 +21,6 @@ endif
 
 PIXYS_TARGET_UPDATEPACKAGE := $(PRODUCT_OUT)/$(PIXYS_VERSION)-img.zip
 PIXYS_TARGET_UPDATEPACKAGE_FOLDER := $(PRODUCT_OUT)
-PIXYS_BUILD_TIME :=
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
@@ -61,7 +60,7 @@ updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"MD5            : "${CL_MAG}" $(shell cat $(PIXYS_TARGET_UPDATEPACKAGE).md5sum | awk '{print $$1}')"${CL_RST}
 	@echo -e ${CL_CYN}"Size           : "${CL_MAG}" $(shell du -hs $(PIXYS_TARGET_UPDATEPACKAGE) | awk '{print $$1}')"${CL_RST}
 	@echo -e ${CL_CYN}"Size(in bytes) : "${CL_MAG}" $(shell wc -c $(PIXYS_TARGET_UPDATEPACKAGE) | awk '{print $$1}')"${CL_RST}
-	@echo -e ${CL_CYN}"DateTime       : "${CL_MAG} $(PIXYS_BUILD_DATETIME)${CL_RST}
+	@echo -e ${CL_CYN}"DateTime       : "${CL_MAG} $(PIXYS_BUILD_DATE)-$(PIXYS_BUILD_TIME)${CL_RST}
 	@echo -e ${CL_CYN}"Build Type     : "${CL_MAG} $(PIXYS_BUILD_TYPE)${CL_RST}
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
 	@echo -e ""
