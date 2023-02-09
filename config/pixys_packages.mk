@@ -1,6 +1,5 @@
 # PixysOS packages
 PRODUCT_PACKAGES += \
-    Aperture \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
@@ -13,6 +12,11 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
     system/bin/getcap \
     system/bin/setcap
+
+ifneq ($(TARGET_INCLUDE_OEM_CAMERA),true)
+PRODUCT_PACKAGES += \
+    Aperture
+endif
 
 # TextClassifier
 PRODUCT_PACKAGES += \
