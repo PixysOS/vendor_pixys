@@ -16,6 +16,23 @@
       "message": "breaks offline charging animation completely",
       "revId": "20eca6e2f2f9c972456582d2d84fb2975521d0fb",
       "serverId": "dc9c43de-f401-424a-9bd3-945633c9f028"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fc92237_b676951b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-02-12T16:39:47Z",
+      "side": 1,
+      "message": "https://gerrit.pixysos.com/c/PixysOS/vendor_pixys/+/25299",
+      "revId": "20eca6e2f2f9c972456582d2d84fb2975521d0fb",
+      "serverId": "dc9c43de-f401-424a-9bd3-945633c9f028"
     }
   ]
 }
