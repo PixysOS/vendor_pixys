@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4091d804_df7c20bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2023-02-27T13:22:51Z",
+      "side": 1,
+      "message": "can you confirm updaterscript issue again with these new patches \n\nhttps://gerrit.pixysos.com/q/topic:thirteen-lto",
+      "revId": "d64aff2ab766decf0eec155f00a00818c19438c8",
+      "serverId": "dc9c43de-f401-424a-9bd3-945633c9f028"
+    }
+  ]
+}
