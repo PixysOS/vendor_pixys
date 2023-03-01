@@ -24,6 +24,9 @@ ifeq ($(PIXYS_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     Updater
 
+# Sign with our private keys
+$(call inherit-product, vendor/security/pixys/keys.mk)
+
 endif
 
 TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
