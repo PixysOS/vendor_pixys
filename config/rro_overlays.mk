@@ -2,4 +2,5 @@
 PRODUCT_PACKAGES += \
     CustomPixelLauncherOverlay \
     NetworkStackOverlay \
-    ImmersiveNavigationOverlay
+    ImmersiveNavigationOverlay \
+    DarkBgOverlay
