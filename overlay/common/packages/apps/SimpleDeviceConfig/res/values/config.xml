@@ -176,9 +176,6 @@
         <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
         <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
 
-        <!-- Pixel Launcher Overview -->
-        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
-
         <!-- Google Live Translate -->
         <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
         <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
@@ -234,24 +231,6 @@
         <item>device_personalization_services/SmartRecPixelSearch__enable_search_on_files=false</item>
         <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
-
-        <!-- Pixel Launcher -->
-        <item>launcher/enable_one_search=true</item>
-        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
-        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
-        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
-
-        <!-- Pixel Launcher (Additional) -->
-        <item>launcher/ENABLE_LOCAL_COLOR_POPUPS=true</item>
-        <item>launcher/KEYGUARD_ANIMATION=true</item>
-        <item>launcher/ENABLE_REGION_SAMPLING=true</item>
-        <item>launcher/ENABLE_MINIMAL_DEVICE=true</item>
-        <item>launcher/ENABLE_LAUNCHER_ACTIVITY_THEME_CROSSFADE=true</item>
-        <item>launcher/ENABLE_DISMISS_PREDICTION_UNDO=true</item>
-        <item>launcher/ENABLE_KEYBOARD_TRANSITION_SYNC=true</item>
-        <item>launcher/ENABLE_WIDGET_PICKER_DEPTH=true</item>
-        <item>launcher/SHOW_DELIGHTFUL_PAGINATION_FOLDER=true</item>
-        <item>launcher/POPUP_MATERIAL_U=true</item>
 
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
