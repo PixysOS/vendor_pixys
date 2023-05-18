@@ -22,7 +22,6 @@
         <item>systemui/back_gesture_ml_model_name=backgesture</item>
         <item>systemui/back_gesture_ml_model_threshold=0.8</item>
 
-
         <!-- Don't pin camera app to save memory -->
         <item>runtime_native_boot/pin_camera=false</item>
 
@@ -199,6 +198,13 @@
         <item>device_personalization_services/SpeechRecognitionService__resumable_diarization_enabled=true</item>
         <item>device_personalization_services/SpeechRecognitionService__skip_model_download_user_confirmation=false</item>
         <item>device_personalization_services/SpeechRecognitionService__tng_transcription_soda_ttl_sec=10</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/enable_quick_launch_v2=true</item>
 
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
