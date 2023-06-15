@@ -4,7 +4,10 @@ PRODUCT_PACKAGES += \
 
 # google-sans family
 PRODUCT_PACKAGES += \
-    GoogleSansClock-Regular.ttf
+    GoogleSans-Italic.ttf \
+    GoogleSans-Regular.ttf \
+    GoogleSansClock-Regular.ttf \
+    GoogleSansFlex-Regular.ttf
 
 # Lustria family
 PRODUCT_PACKAGES += \
@@ -68,8 +71,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GInterVF-Italic.ttf \
     GInterVF-Roman.ttf \
-    GoogleSans-Italic.ttf \
-    GoogleSans-Regular.ttf \
     HarmonyOS-Sans-BlackItalic.ttf \
     HarmonyOS-Sans-Black.ttf \
     HarmonyOS-Sans-BoldItalic.ttf \
