@@ -257,12 +257,54 @@
         <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
         <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
 
+        <item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+        <item>device_personalization_services/Translate__chat_translate_languages=de,en,es,fr,it,ja,hi,zh,ru,pl,pt,ko,th,tr,nl,zh_Hant,sv,da,vi,ar,fa</item>
+        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+        <item>device_personalization_services/Translate__disable_translate_without_system_animation=false</item>
+        <item>device_personalization_services/Translate__enable_chronicle_migration=false</item>
+        <item>device_personalization_services/Translate__enable_default_langid_model=false</item>
+        <item>device_personalization_services/Translate__enable_dictionary_langid_detection=false</item>
+        <item>device_personalization_services/Translate__enable_opmv4_service=true</item>
+        <item>device_personalization_services/Translate__enable_spa_setting=false</item>
+        <item>device_personalization_services/Translate__interpreter_source_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__interpreter_target_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__text_to_text_language_list=vi,ja,fa,ro,nl,mr,mt,ar,ms,it,eo,is,et,es,iw,zh,uk,af,id,ur,mk,cy,hi,el,be,pt,lt,hr,lv,hu,ht,te,de,bg,th,bn,tl,pl,tr,kn,sv,gl,ko,sw,cs,da,ta,gu,ka,sl,ca,sk,ga,sq,no,fi,ru,fr,en,zh_Hant,fil</item>
+        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
+        <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
+
+        <item>device_personalization_services/Screenshot__can_use_gms_core_to_save_boarding_pass=true</item>
+        <item>device_personalization_services/Screenshot__can_use_gpay_to_save_boarding_pass=true</item>
+        <item>device_personalization_services/Screenshot__enable_add_to_wallet_title=true</item>
+        <item>device_personalization_services/Screenshot__enable_barhopper_late_loading=true</item>
+        <item>device_personalization_services/Screenshot__enable_covid_card_action=true</item>
+        <item>device_personalization_services/Screenshot__enable_covid_card_inflate_buffer=false</item>
+        <item>device_personalization_services/Screenshot__enable_in_work_profile=true</item>
+        <item>device_personalization_services/Screenshot__enable_lens_screenshots_translate_action=true</item>
+        <item>device_personalization_services/Screenshot__enable_quick_share_smart_action=true</item>
+        <item>device_personalization_services/Screenshot__enable_screenshot_notification_smart_actions=true</item>
+        <item>device_personalization_services/Screenshot__screenshot_boarding_pass_tsa_precheck_url=https://www.gstatic.com/device_personalization_services/images/passes/tsa_pre.png</item>
+        <item>device_personalization_services/Sharesheet__enable_nearby_share_exp=true</item>
+        <item>device_personalization_services/Sharesheet__enable_nearby_share_exp_app_row=true</item>
+        <item>device_personalization_services/Sharesheet__enable_whatsapp_pecan=true</item>
+
+        <item>device_personalization_services/VisualCortex__enable=true</item>
+        <item>device_personalization_services/VisualCortex__enable_control_system=true</item>
+        <item>device_personalization_services/VisualCortex__enable_whitelist_packages=true</item>
+        <item>device_personalization_services/VisualCortex__fedex_log_enabled=false</item>
+        <item>device_personalization_services/VisualCortex__trim_visual_property_set=false</item>
+        <item>device_personalization_services/VisualCortex__view_tree_event_delay_in_mills=0</item>
+
         <!-- Pixel Launcher -->
         <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
-        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/enable_quick_launch_v3_qsb=true</item>
         <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
         <item>launcher/enable_one_search=true</item>
-        <item>launcher/enable_quick_launch_v2=true</item>
+        <item>launcher/enable_quick_launch_v3_aa=true</item>
 
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
@@ -279,8 +321,4 @@
 
     </string-array>
 
-    <string-array name="configs_base_soft">
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
-    </string-array>
 </resources>
