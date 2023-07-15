@@ -32,11 +32,7 @@ endif
 TARGET_PRODUCT_SHORT := $(subst pixysos_,,$(PIXYS_BUILD))
 
 # Gapps
-ifeq ($(BUILD_WITH_MINIMAL_GAPPS),true)
-$(call inherit-product, vendor/gms/common/gms-minimal.mk)
-else
-$(call inherit-product, vendor/gms/common/gms-full.mk)
-endif
+$(call inherit-product, vendor/gms/products/gms.mk)
 PIXYS_EDITION := GAPPS
 PIXYS_BUILD_DATETIME := $(shell date +%s)
 PIXYS_BUILD_DATE := $(shell date -d @$(PIXYS_BUILD_DATETIME) +"%Y%m%d-%H%M%S")
