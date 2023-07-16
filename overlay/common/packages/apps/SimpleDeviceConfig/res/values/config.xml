@@ -44,9 +44,6 @@
         <!-- Enable smart actions in the clipboard overlay -->
         <item>systemui/clipboard_overlay_show_actions=true</item>
 
-        <!-- Enable seperated notification/ring volume sliders in UI -->
-        <item>systemui/volume_separate_notification=true</item>
-
         <!--
             Device Personalization Services (AiAi)
         -->
