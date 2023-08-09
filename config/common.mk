@@ -113,10 +113,6 @@ $(call inherit-product, vendor/pixys/bootanimation/bootanimation.mk)
 # Fonts
 $(call inherit-product, vendor/pixys/config/fonts.mk)
 
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
-
 # Quick Tap
 ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
 PRODUCT_COPY_FILES += \
