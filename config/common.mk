@@ -161,6 +161,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.ab-ota=quicken
 endif
 
+# Pixel customization
+TARGET_SUPPORTS_GOOGLE_BATTERY ?= false
+
 # faceunlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
