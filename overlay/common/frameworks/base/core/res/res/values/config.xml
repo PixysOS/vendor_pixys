@@ -143,9 +143,6 @@
         <!-- Enable safety center -->
         <item>privacy/safety_center_is_enabled=true</item>
 
-        <!-- Enable protected by android banner -->
-        <item>privacy/safety_protection_enabled=true</item>
-
         <!-- Globally enable the new photo picker -->
         <item>storage_native_boot/take_over_get_content=true</item>
 
