@@ -7,6 +7,3 @@ endef
 
 # Include board/platform macros
 include vendor/pixys/build/core/utils.mk
-
-# Include vendor platform definitions
-include vendor/pixys/build/core/vendor/*.mk
