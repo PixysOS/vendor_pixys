@@ -164,10 +164,6 @@ endif
 # Pixel customization
 TARGET_SUPPORTS_GOOGLE_BATTERY ?= false
 
-# Enable lockscreen live wallpaper
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.wm.debug.lockscreen_live_wallpaper=true
-
 # faceunlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= false
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
