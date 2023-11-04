@@ -139,7 +139,7 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle \
+    SystemUI \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
@@ -182,6 +182,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 $(call inherit-product, vendor/pixys/config/rro_overlays.mk)
 
 # Pixel Framework
-$(call inherit-product, vendor/pixel-framework/config.mk)
+#$(call inherit-product, vendor/pixel-framework/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
