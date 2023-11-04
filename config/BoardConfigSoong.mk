@@ -59,6 +59,8 @@ SOONG_CONFIG_NAMESPACES += pixysQcomVars
 SOONG_CONFIG_pixysQcomVars += \
     legacy_hw_disk_encryption \
     should_wait_for_qsee \
+    qti_vibrator_effect_lib \
+    qti_vibrator_use_effect_stream \
     supports_extended_compress_format \
     supports_hw_fde \
     supports_hw_fde_perf \
@@ -97,6 +99,7 @@ SOONG_CONFIG_pixysGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLO
 SOONG_CONFIG_pixysGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_pixysGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_pixysGlobalVars_camera_uses_newer_hidl_override_format := $(TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT)
+SOONG_CONFIG_pixysQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -105,6 +108,7 @@ TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
+TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
@@ -123,6 +127,7 @@ SOONG_CONFIG_pixysQcomVars_qcom_display_headers_namespace := vendor/qcom/opensou
 else
 SOONG_CONFIG_pixysQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
+SOONG_CONFIG_pixysQcomVars_qti_vibrator_effect_lib := $(TARGET_QTI_VIBRATOR_EFFECT_LIB)
 
 ifneq ($(TARGET_USES_NQ_NFC),true)
 PRODUCT_SOONG_NAMESPACES += hardware/nxp
