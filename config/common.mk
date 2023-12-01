@@ -184,6 +184,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pixys/overlay/common
 # rro_overlays
 $(call inherit-product, vendor/pixys/config/rro_overlays.mk)
 
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Pixel Framework
 $(call inherit-product, vendor/pixel-framework/config.mk)
 
