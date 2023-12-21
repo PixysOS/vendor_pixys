@@ -43,8 +43,8 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/pixys.xml"
-custom_default_revision = "thirteen"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'thirteen')
+custom_default_revision = "fourteen"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'fourteen')
 custom_dependencies = "pixys.dependencies"
 org_manifest = "pixys-devices"  # leave empty if org is provided in manifest
 org_display = "PixysOS-Devices"  # needed for displaying
