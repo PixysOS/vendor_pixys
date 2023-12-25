@@ -238,22 +238,6 @@
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_tomorrow_forecast=true</item>
         <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
 
-        <!-- Gboard -->
-        <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
-        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
-        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
-        <item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item>
-        <item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
-        <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
-        <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_correction=true</item>
-        <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
-        <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
-
         <!-- Google Live Translate -->
         <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
         <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
@@ -266,18 +250,6 @@
         <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
-
-        <!-- Gboard Speech pack -->
-        <item>device_personalization_services/SpeechPack__enable_mdd_download_notifications=true</item>
-        <item>device_personalization_services/SpeechPack__speech_recognition_service_settings_enabled=true</item>
-        <item>device_personalization_services/SpeechPack__use_mdd_download_system=true</item>
-
-        <!-- WallpaperEffects -->
-        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
-        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
-        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item>
-        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
-        <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
 
         <!-- Pixel Launcher -->
         <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
