@@ -146,8 +146,13 @@
         <!-- Globally enable the new photo picker -->
         <item>storage_native_boot/take_over_get_content=true</item>
 
-        <!-- Allow users to disable location indicators in Developer Options -->
+        <!-- Enable new location indicators -->
+        <item>privacy/location_access_check_enabled=true</item>
+        <item>privacy/location_accuracy_enabled=true</item>
         <item>privacy/location_indicator_settings_enabled=true</item>
+        <item>privacy/location_indicators_enabled=true</item>
+        <item>privacy/location_indicators_show_system=false</item>
+        <item>privacy/location_indicators_small_enabled=true</item>
 
         <!-- Enable smart actions in the clipboard overlay -->
         <item>systemui/clipboard_overlay_show_actions=true</item>
