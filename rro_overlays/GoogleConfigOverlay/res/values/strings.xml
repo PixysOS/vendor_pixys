@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2020, Raphielscape LLC. and Haruka LLC.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <string name="biometric_app_setting_name">Use face or fingerprint</string>
+    <string name="biometric_dialog_default_subtitle">Use your face or fingerprint to continue</string>
+    <string name="biometric_or_screen_lock_app_setting_name">Use face, fingerprint, or screen lock</string>
+    <string name="biometric_or_screen_lock_dialog_default_subtitle">Use your face, fingerprint, or screen lock to continue</string>
+    <string name="face_recalibrate_notification_name">Face unlock</string>
+    <string name="face_recalibrate_notification_title">Please re-enroll your face</string>
+    <string name="harmful_app_warning_title">Play Protect warning</string>
+    <string name="safety_protection_display_text">&lt;font face=\"google-sans\">Protected by &lt;/font>&lt;font face=\"google-sans-medium\">Android&lt;/font></string>
+</resources>
