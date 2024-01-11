@@ -99,6 +99,10 @@
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
 
+
+    <!-- Allow the gesture power + volume up to change the ringer mode while the device is interactive. -->
+    <bool name="config_volumeHushGestureEnabled">true</bool>
+
     <!-- Control the behavior when the user long presses the power button.
             0 - Nothing
             1 - Global actions menu
