@@ -17,7 +17,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.providers.media.overlay.pixel">
-    <overlay android:isStatic="true" android:priority="0" android:targetName="MediaProviderConfig" android:targetPackage="com.google.android.providers.media.module"/>
+    <overlay android:isStatic="true" android:priority="0" android:targetName="MediaProviderConfig" android:targetPackage="com.android.providers.media.module"/>
 
     <application android:hasCode="false"/>
 </manifest>

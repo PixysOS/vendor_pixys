@@ -206,9 +206,6 @@
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
     <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead:com.google.pixel.exo</string>
 
-    <!-- Component name for the default module metadata provider on this device -->
-    <string name="config_defaultModuleMetadataProvider" translatable="false">com.google.android.modulemetadata</string>
-
         <!-- The package name for the system's speech recognition service.
          This service must be trusted, as it can be activated without explicit consent of the user.
          Example: "com.android.speech/.RecognitionService"
@@ -323,7 +320,7 @@
         a bugreport or incident report with EXPLICT-level sharing flags is going to be
         shared, this app will be sent the PENDING_INCIDENT_REPORTS_CHANGED broadcast.
     -->
-    <string name="config_incidentReportApproverPackage" translatable="false">com.google.android.permissioncontroller</string>
+    <string name="config_incidentReportApproverPackage" translatable="false">com.android.permissioncontroller</string>
 
     <!-- Package name that will receive an explicit manifest broadcast for
          android.os.action.POWER_SAVE_MODE_CHANGED. -->
@@ -335,19 +332,6 @@
          recents component. When using a different default launcher, change this appropriately or
          use the default systemui implementation: com.android.systemui/.recents.RecentsActivity -->
     <string name="config_recentsComponentName" translatable="false">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
-
-    <!-- The package name for the default retail demo app.
-         This package must be trusted, as it has the permissions to query the usage stats on the
-         device.
-         Example: "com.google.android.retaildemo"
-     -->
-    <string name="config_retailDemoPackage" translatable="false">com.google.android.retaildemo</string>
-
-    <!-- The package signature hash for the default retail demo app.
-         This package must be trusted, as it has the permissions to query the usage stats on the
-         device.
-     -->
-    <string name="config_retailDemoPackageSignature" translatable="false">6547c73dee150c103980bfdffe55cc9a011d785dd694a5f99afd8205bcaf1f80</string>
 
     <!-- This is the default launcher package with an activity to use on secondary displays that
          support system decorations.
