@@ -250,12 +250,18 @@
         <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
 
         <!-- Google Live Translate -->
-        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
-        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
-        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
-        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
-        <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
-        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
+	<item>device_personalization_services/SimpleStorage__disable_live_translate_dao_provider=false</item>
+	<item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+	<item>device_personalization_services/Translate__beta_audio_to_text_languages_in_live_caption=ja</item>
+	<item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+	<item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+	<item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+	<item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+	<item>device_personalization_services/Translate__disable_session_state=false</item>
+	<item>device_personalization_services/Translate__disable_translate_without_system_animation=true</item>
+	<item>device_personalization_services/Translate__translation_service_enabled=true</item>
+	<item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+	<item>device_personalization_services/Translate__use_translate_kit_streaming_api=false</item>
 
         <!-- Pixel Launcher overview -->
         <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
@@ -286,9 +292,31 @@
         <item>systemui/enable_screenshot_notification_smart_actions=true</item>
         <item>systemui/enable_screenshot_scrolling=true</item>
 
-        <!-- Notifications -->
+        <!--Gboard -->
+	<item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
+	<item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+	<item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
+	<item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item> 
+	<item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
+	<item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
+	<item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=true</item> 
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_past_correction=true</item>
+	<item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+	<item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+
+        <!-- Notifications Assistant -->
         <item>notification_assistant/generate_actions=true</item>
         <item>notification_assistant/generate_replies=true</item>
- 
+	<item>device_personalization_services/NotificationAssistant__enable_service=true</item>
+	<item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
+	<item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
+	<item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
+
     </string-array>
 </resources>
