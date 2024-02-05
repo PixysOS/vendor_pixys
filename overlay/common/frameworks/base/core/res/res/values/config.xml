@@ -49,7 +49,7 @@
         <item>com.mediatek.ims</item>
         <item>com.qualcomm.qti.cne</item>
         <item>com.shannon.imsservice</item>
-        <item>org.pixelexperience.faceunlock</item>
+        <item>co.aospa.sense</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
